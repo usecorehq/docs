@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Qorelly Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6B46FF",
+    "light": "#8B5CF6",
+    "dark": "#5B35EF"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -114,9 +114,11 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
+      "x": "https://x.com/qorelly",
       "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://linkedin.com/company/mintlify",
+      "instagram": "https://www.instagram.com/useqorelly"
     }
-  }
+  },
+  "description": "Business management and POS platform for Nigerian businesses restaurants, spas, pharmacies, retail, and fuel stations and more. "
 }
