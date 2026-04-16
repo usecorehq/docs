@@ -1,0 +1,95 @@
+---
+title: "Menu Management"
+description: "Create and organize your menu with categories, items, and pricing"
+---
+
+The Menu module lets you create and manage all items your business offers — whether they are dishes, services, products, or medicines (depending on your [business type](/business-types)).
+
+## Categories
+
+Categories organize your menu items into logical groups. Navigate to **Menu > Categories** to manage them.
+
+### Creating categories
+
+1. Click **Add Category**
+2. Enter the category name (e.g., "Appetizers", "Main Course", "Beverages")
+3. Optionally add subcategories for more granular organization
+4. Set the display order to control how categories appear on your menu
+
+### Subcategories
+
+You can nest categories to create a hierarchy. For example:
+- **Beverages** (main category)
+  - Hot Drinks (subcategory)
+  - Cold Drinks (subcategory)
+  - Smoothies (subcategory)
+
+## Menu items
+
+Navigate to **Menu > Items** to manage your menu items.
+
+### Creating a menu item
+
+Click **Add Item** and fill in the following fields:
+
+| Field | Description | Required |
+|-------|-------------|----------|
+| Name | The item name displayed to customers | Yes |
+| Description | A brief description of the item | No |
+| Price | The base price | Yes |
+| Category | Which category this item belongs to | Yes |
+| Image | A photo of the item | No |
+| SKU | Stock keeping unit code | No |
+| Barcode | Barcode for POS scanning | No |
+
+### App visibility
+
+Each menu item can be configured to appear in specific apps. Toggle visibility for:
+
+- **Menu** — Appears on the public digital menu
+- **POS** — Available for order creation in the point of sale
+- **Inventory** — Tracked as an inventory item
+- **Bookings** — Available as a bookable service
+
+### Inventory tracking
+
+When inventory tracking is enabled for a menu item, you can set:
+
+- **Quantity** — Current stock level
+- **Reorder point** — Threshold for low-stock alerts
+- **Supplier** — Linked supplier for reordering
+
+### Availability toggle
+
+Toggle items on or off without deleting them. Unavailable items are hidden from the POS and digital menu but remain in your system.
+
+## Views
+
+Switch between two view modes:
+
+- **Grid view** — Card layout with images, ideal for visual browsing
+- **List view** — Compact table layout for quick management
+
+Your view preference is saved and persisted across sessions.
+
+## Bulk import/export
+
+For large menus, use the CSV import/export feature:
+
+1. Click **Import/Export** in the menu toolbar
+2. **Export** downloads your current menu as a CSV file
+3. **Import** lets you upload a CSV to create or update items in bulk
+
+<Tip>
+  Use the export feature first to get the correct CSV format, then modify and re-import.
+</Tip>
+
+## QR code
+
+Generate a QR code that links directly to your public digital menu:
+
+1. Go to **Menu > QR Code**
+2. Your unique QR code is generated from your restaurant's slug
+3. Download and print the QR code for table cards, posters, or receipts
+
+Customers scan the QR code to view your menu on their phone — no app download required. See [Digital Menu](/platform/digital-menu) for more details.

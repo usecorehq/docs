@@ -1,0 +1,56 @@
+---
+title: "Workspaces"
+description: "Switch between multiple businesses or team memberships"
+---
+
+Workspaces let users who belong to multiple businesses switch between them without logging out. If you are a team member at more than one restaurant, spa, or store on Qorelly, each one appears as a separate workspace.
+
+## How workspaces work
+
+When you log in, Qorelly checks which businesses you are associated with:
+
+- **As an owner** — Your own business appears as a workspace
+- **As a team member** — Any business that has invited you appears as a workspace
+
+If you belong to only one business, the app automatically selects it and takes you to the dashboard. If you belong to multiple, you see the workspace selector.
+
+## Workspace selector
+
+The workspace selector appears at `/workspaces` and shows:
+
+- Business name and logo for each workspace
+- Your role at each business
+- Active/inactive status
+
+Tap a workspace to enter it. All data in the dashboard, POS, inventory, and other modules is scoped to the selected workspace.
+
+## Switching workspaces
+
+To switch to a different workspace during a session:
+
+1. Access the workspace selector from the navigation
+2. Choose the business you want to work with
+3. The dashboard refreshes with data from the selected workspace
+
+Your active workspace is remembered and persisted between sessions, so you return to the same workspace when you next open the app.
+
+## How data is scoped
+
+Each workspace is completely isolated:
+
+| Data | Scoped per workspace |
+|------|---------------------|
+| Orders | Yes |
+| Menu items | Yes |
+| Inventory | Yes |
+| Bookings | Yes |
+| Customers | Yes |
+| Team members | Yes |
+| Settings | Yes |
+| Locations | Yes |
+
+There is no data sharing between workspaces. A customer at Restaurant A is a separate record from a customer at Restaurant B, even if they share the same phone number.
+
+## Admin impersonation
+
+Super administrators can impersonate any workspace for debugging and support purposes. This is an internal feature that allows the admin to view and manage a business as if they were the owner, without needing the owner's credentials.

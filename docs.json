@@ -14,55 +14,71 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "business-types"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Platform Features",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "platform/dashboard",
+              "platform/menu-management",
+              "platform/point-of-sale",
+              "platform/inventory",
+              "platform/bookings",
+              "platform/customers",
+              "platform/team-management",
+              "platform/digital-menu"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Settings & Configuration",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "platform/settings",
+              "platform/locations",
+              "platform/apps-modules"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Mobile App",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Getting Started",
             "pages": [
-              "api-reference/introduction"
+              "mobile/overview",
+              "mobile/app-modes"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Mobile Features",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "mobile/offline-mode",
+              "mobile/receipt-printing",
+              "mobile/barcode-scanning"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Administration",
+        "groups": [
+          {
+            "group": "Access Control",
+            "pages": [
+              "administration/roles-permissions",
+              "administration/terminal-mode"
+            ]
+          },
+          {
+            "group": "Multi-Tenant",
+            "pages": [
+              "administration/workspaces",
+              "administration/multi-location"
             ]
           }
         ]
@@ -71,14 +87,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Website",
+          "href": "https://qorelly.com",
+          "icon": "globe"
         }
       ]
     }
@@ -91,34 +102,32 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@qorelly.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Get Started",
+      "href": "https://qorelly.com"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
       "x": "https://x.com/qorelly",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify",
       "instagram": "https://www.instagram.com/useqorelly"
     }
   },
-  "description": "Business management and POS platform for Nigerian businesses restaurants, spas, pharmacies, retail, and fuel stations and more. "
+  "description": "Documentation for Qorelly — the business management and POS platform for restaurants, spas, pharmacies, retail stores, fuel stations, and more."
 }

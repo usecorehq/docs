@@ -1,0 +1,99 @@
+---
+title: "Team Management"
+description: "Invite team members, assign roles, and manage permissions"
+---
+
+The Team module lets you invite team members, assign roles with granular permissions, and track team activity.
+
+## Team members
+
+Navigate to **Team** to view all members of your organization.
+
+Each team member has:
+
+| Field | Description |
+|-------|-------------|
+| Name | Team member's full name |
+| Email | Email address (used for invitations) |
+| Role | Assigned role (owner, manager, cashier, etc.) |
+| PIN | Optional PIN code for terminal mode login |
+| Status | invited, active, disabled, or left |
+| Last login | Most recent login timestamp |
+
+## Inviting team members
+
+<Steps>
+  <Step title="Click Invite">
+    On the Team page, click **Invite Member**.
+  </Step>
+  <Step title="Enter details">
+    Enter the team member's email address and select a role.
+  </Step>
+  <Step title="Send invitation">
+    The team member receives an email invitation to join your organization.
+  </Step>
+  <Step title="Member accepts">
+    Once accepted, their status changes from **invited** to **active**.
+  </Step>
+</Steps>
+
+You can resend invitations if a team member hasn't accepted yet.
+
+## Roles
+
+Qorelly includes several built-in roles:
+
+| Role | Description |
+|------|-------------|
+| Owner | Full access to everything (business creator) |
+| Manager | Can manage most operations except billing and danger zone settings |
+| Cashier | POS access for processing orders and payments |
+| Waiter | Can view and create orders, manage tables |
+| Chef | Kitchen-focused — can view and update order preparation status |
+
+<Info>
+  Role labels vary by [business type](/business-types). Spas have "Therapist" and "Stylist" roles, pharmacies have "Pharmacist", etc.
+</Info>
+
+### Custom roles
+
+Create custom roles with specific permissions tailored to your needs:
+
+1. On the Team page, go to the **Roles** section
+2. Click **Create Role**
+3. Name the role and select permissions for each module
+
+## Permissions
+
+Each role has granular permissions across these modules:
+
+| Module | Available actions |
+|--------|------------------|
+| Dashboard | View |
+| Menu | View, Edit, Delete |
+| POS | View, Create, Edit |
+| Inventory | View, Edit |
+| Bookings | View, Create, Edit, Cancel |
+| Customers | View, Edit, Delete |
+| Reports | View, Export |
+| Settings | View, Edit |
+| Team | View, Invite, Manage |
+
+For a detailed breakdown, see [Roles & Permissions](/administration/roles-permissions).
+
+## Activity log
+
+The Team page includes an activity log that tracks all team member actions:
+
+- Login events with IP address and device info
+- Key actions (order creation, status changes, etc.)
+- Timestamps for full audit trails
+
+## Managing team members
+
+For each team member, you can:
+
+- **Change role** — Reassign to a different role
+- **Set PIN** — Configure a PIN for terminal mode access
+- **Disable** — Temporarily suspend access without removing the member
+- **Remove** — Permanently remove from the team

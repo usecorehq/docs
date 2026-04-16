@@ -1,0 +1,76 @@
+---
+title: "Mobile App Overview"
+description: "QorellyMobile — the Flutter-based companion app for your business"
+---
+
+QorellyMobile is the mobile companion to the Qorelly web platform. Built with Flutter, it runs on both iOS and Android and provides full access to your business operations on the go.
+
+## Key highlights
+
+- **Offline-first** — Create orders even without internet, and sync automatically when you're back online
+- **Receipt printing** — Print receipts via Bluetooth thermal printers or native POS hardware
+- **Barcode scanning** — Scan product barcodes for quick POS entry
+- **6 operational modes** — Customize the app interface for your workflow
+- **Multi-location** — Switch between branches seamlessly
+- **Responsive design** — Optimized layouts for phones and tablets
+
+## Getting started
+
+<Steps>
+  <Step title="Download the app">
+    Install QorellyMobile from the App Store (iOS) or Google Play Store (Android).
+  </Step>
+  <Step title="Log in">
+    Use the same email and password as your Qorelly web account.
+  </Step>
+  <Step title="Select your mode">
+    On first login, the app recommends an [operational mode](/mobile/app-modes) based on your business type. You can accept the recommendation or choose a different mode.
+  </Step>
+  <Step title="Start working">
+    The app opens to your mode's default screen — typically the POS for order-based businesses or the Bookings calendar for appointment-based businesses.
+  </Step>
+</Steps>
+
+## Shared backend
+
+QorellyMobile shares the same Supabase backend as the web platform. This means:
+
+- All data syncs between web and mobile in real time
+- Team members, roles, and permissions are consistent
+- Orders created on mobile appear on the web dashboard and vice versa
+- Customer profiles are shared across platforms
+
+## Navigation
+
+The mobile app uses a bottom tab bar for navigation. The tabs shown depend on your selected [app mode](/mobile/app-modes).
+
+The **More** menu provides access to additional features:
+
+- Menu Management
+- Team
+- Reports
+- Settings
+- Work Periods
+- Locations
+- Help & Support
+
+## Tablet support
+
+On tablets (screen width 600px+), the app adjusts its layout:
+
+- Multi-column grids for menu items and orders
+- Split-view screens for order management
+- Larger floor plan view for table management
+- Enhanced bookings calendar with more detail
+
+## App flavors
+
+QorellyMobile is available in three flavors for development and testing:
+
+| Flavor | Purpose | Indicator |
+|--------|---------|-----------|
+| Production | Live app for real use | No banner |
+| Development | For testing new features | Red "DEV" banner |
+| Sandbox | Demo mode with sample data | Amber "DEMO" banner |
+
+Each flavor connects to its own Supabase instance, so test data never mixes with production data.

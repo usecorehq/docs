@@ -1,0 +1,100 @@
+---
+title: "Bookings & Reservations"
+description: "Manage reservations with calendar views, tables, rooms, and staff"
+---
+
+The Bookings module lets you accept and manage reservations. It supports calendar views, table and room management, staff assignment, and an optional public booking feature for customers.
+
+## Calendar views
+
+Navigate to **Bookings** to see your reservations in calendar format. Three views are available:
+
+- **Month view** — Grid overview showing bookings across the month
+- **Week view** — Hourly slots from 7 AM to 10 PM for the selected week
+- **Day view** — Detailed view of a single day's bookings
+
+Click any booking to view its details or update its status.
+
+## Booking details
+
+Each booking contains:
+
+| Field | Description |
+|-------|-------------|
+| Customer name | Guest name |
+| Phone | Contact number |
+| Date & time | Reservation date and time |
+| Party size | Number of guests |
+| Table/Room | Assigned table or service room |
+| Status | Current booking status |
+| Notes | Any special requests or instructions |
+
+## Booking status workflow
+
+Bookings follow this progression:
+
+```
+Pending → Confirmed → Arrived → Completed
+                                     ↘ Cancelled
+```
+
+| Status | Description |
+|--------|-------------|
+| Pending | New booking awaiting confirmation |
+| Confirmed | Booking approved |
+| Arrived | Guest has arrived |
+| Completed | Service completed |
+| Cancelled | Booking was cancelled |
+
+### Approving bookings
+
+From the bookings dashboard, you can quickly approve or decline pending bookings with one click. When a booking is approved, a customer profile is automatically created or updated.
+
+## Table management
+
+Navigate to **Bookings > Tables** to set up your tables.
+
+For each table:
+- Set the table name or number
+- Assign a capacity (number of seats)
+- Link to a room or area
+- Mark as active or inactive
+
+## Floor plan
+
+Navigate to **Bookings > Floor Plan** for an interactive visual editor of your table layout. Drag and position tables to match your physical floor arrangement.
+
+<Info>
+  The floor plan is especially useful on tablets, where staff can quickly see table availability and tap to manage orders.
+</Info>
+
+## Rooms
+
+Navigate to **Bookings > Rooms** to manage service rooms. Rooms are separate from tables and are used for:
+
+- Private dining areas in restaurants
+- Treatment rooms in spas
+- Consultation rooms in pharmacies
+
+## Staff assignment
+
+Navigate to **Bookings > Staff** to assign team members to bookings. This helps track which staff member is responsible for each reservation.
+
+## Public booking
+
+Customers can book directly from your [digital menu](/platform/digital-menu) page if public booking is enabled.
+
+To enable:
+1. Go to **Settings > General**
+2. Toggle **Public Booking** on
+
+When enabled, your digital menu page shows a **Book a Table** button. Customers can:
+- Select a date and time
+- Enter their name, phone number, and party size
+- Add any special notes
+
+Public bookings arrive as **Pending** and require your approval before they are confirmed.
+
+<Tip>
+  Public booking creates or updates customer profiles automatically, building your customer database with every reservation.
+</Tip>
