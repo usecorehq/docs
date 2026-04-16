@@ -1,77 +1,75 @@
 ---
 title: "Terminal Mode"
-description: "Shared device access with PIN-based staff login"
+description: "Let multiple staff share one device using PIN codes"
 ---
 
-Terminal Mode is designed for shared devices like a POS terminal at a counter or a tablet on the shop floor. Instead of each staff member logging in with their email and password, they use a short PIN code.
+Got a tablet at the counter that different staff members use throughout the day? Terminal Mode lets everyone share the same device without logging in and out. Each person just enters their PIN to start their shift.
 
 ## How it works
 
-1. An owner or manager sets up a device in Terminal Mode
-2. The device stays logged in to the business account
-3. Individual staff members clock in using their PIN
-4. All actions are attributed to the PIN-authenticated staff member
-5. When done, the staff member locks the terminal
+1. An owner or manager sets up the device in Terminal Mode
+2. The device stays connected to the business account
+3. When a staff member starts their shift, they enter their PIN
+4. Everything they do is tracked under their name
+5. When they're done, they lock the terminal for the next person
 
-## Setting up Terminal Mode
+## Setting it up
 
-### On the web
+### Turn on Terminal Mode
 
-1. Navigate to `/auth/terminal-login`
-2. The device enters Terminal Mode and displays a PIN entry screen
-3. Staff members enter their PIN to access the system
+Open the terminal login page on the device you want to share. The device switches to Terminal Mode and shows a PIN entry screen.
 
-### Assigning PINs
+### Give each person a PIN
 
-Each team member needs a PIN to use Terminal Mode:
+Every staff member who'll use the terminal needs their own PIN:
 
 1. Go to **Team**
-2. Edit a team member
-3. Set their **PIN code** (typically 4-6 digits)
+2. Edit the team member's profile
+3. Set a **PIN code** (usually 4 to 6 digits)
 4. Save
 
 <Warning>
-  PINs should be unique per team member within your business. Avoid simple sequences like 1234 or 0000.
+  Make sure each person has a different PIN, and avoid obvious ones like 1234 or 0000.
 </Warning>
 
-## What staff can access
+## What staff can do in Terminal Mode
 
-In Terminal Mode, access is simplified to the most common operational tasks:
+Terminal Mode keeps things simple and focused on the everyday tasks:
 
-- **POS** — Create and manage orders
-- **Bookings** — View and manage reservations
-- **Order history** — Review recent orders
+- **Take and manage orders** through the POS
+- **View and manage bookings**
+- **See recent orders**
 
-Administrative features like settings, team management, and reports are not accessible in Terminal Mode.
+Settings, team management, reports, and other admin features are not available in Terminal Mode — it's designed for the people working the floor, not the back office.
 
-## Terminal lock screen
+## The lock screen
 
-When no staff member is actively using the terminal, a lock screen is displayed. To unlock:
+When nobody is actively using the terminal, it shows a lock screen. To start working:
 
-1. The staff member enters their PIN
-2. The system verifies the PIN against team member records
-3. On success, the terminal opens with the staff member's session
-4. All subsequent actions are logged under that staff member
+1. Enter your PIN
+2. The terminal unlocks with your session
+3. Everything you do from now on is logged under your name
+4. When you're done, lock the terminal for the next person
 
-## Staff session tracking
+## Keeping track of who did what
 
-Terminal Mode tracks:
+Terminal Mode records:
 
 - Which staff member is currently active
-- When they clocked in
-- All orders and actions during their session
+- When they started
+- Every order and action they take during their session
 
-This data feeds into the team activity log for accountability and reporting.
+All of this feeds into the [activity log](/platform/team-management#activity-log), so managers can always see who did what and when.
 
-## Exiting Terminal Mode
+## Turning Terminal Mode off
 
-To exit Terminal Mode and return to normal login:
+If you need to switch back to normal login:
 
-1. An owner or manager can disable Terminal Mode from the device
-2. The device returns to the standard login screen
+1. An owner or manager disables Terminal Mode on the device
+2. The standard login screen comes back
 
-## Use cases
+## Common uses
 
-- **Restaurant counter** — A shared tablet where waiters and cashiers take turns
-- **Retail checkout** — A POS terminal used by multiple cashiers across shifts
-- **Salon front desk** — A shared device where receptionists manage bookings
+- **Restaurant counter** — A tablet shared by waiters and cashiers across shifts
+- **Retail checkout** — A POS device used by different cashiers throughout the day
+- **Salon front desk** — A shared device where receptionists manage bookings and check customers in

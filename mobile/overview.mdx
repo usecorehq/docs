@@ -1,67 +1,61 @@
 ---
 title: "App Overview"
-description: "QorellyMobile — a cross-platform app for phones, tablets, iPads, and desktop"
+description: "One app for your phone, tablet, iPad, and desktop — wherever you work"
 ---
 
-QorellyMobile is the cross-platform companion to the Qorelly web dashboard. Built with Flutter, it runs natively on **iOS**, **Android**, **tablets and iPads**, and **desktop** (macOS, Windows, Linux) — all from a single codebase.
+Qorelly isn't just a website. There's also an app you can install on pretty much any device — your iPhone, Android phone, iPad, Android tablet, or even your Mac or Windows computer. It gives you the same features as the web dashboard, designed for whatever screen you're using.
 
-## Supported platforms
+## Where you can use it
 
-| Platform | Devices | Status |
-|----------|---------|--------|
-| iOS | iPhone, iPad, iPad Pro | Available |
-| Android | Phones, tablets | Available |
-| macOS | MacBook, iMac, Mac Mini | Available |
-| Windows | Desktop PCs, laptops | Available |
-| Linux | Desktop PCs, laptops | Available |
+| Platform | Devices |
+|----------|---------|
+| iOS | iPhone, iPad, iPad Pro, iPad Mini |
+| Android | Phones and tablets from Samsung, Lenovo, and others |
+| macOS | MacBook, iMac, Mac Mini |
+| Windows | PCs, laptops, Surface devices |
+| Linux | Desktops and laptops |
 
-See [Supported Platforms](/mobile/supported-platforms) for detailed information on each platform and device-specific features.
+Want the full breakdown? See [Supported Platforms](/mobile/supported-platforms).
 
-## Key highlights
+## What makes the app special
 
-- **Cross-platform** — One app for phones, tablets, iPads, and desktop
-- **Offline-first** — Create orders without internet and sync automatically when back online
-- **Receipt printing** — Print via Bluetooth thermal printers or native POS hardware
-- **Barcode scanning** — Scan product barcodes with the device camera for quick POS entry
-- **6 operational modes** — Customize the interface for your specific workflow
-- **Multi-location** — Switch between branches seamlessly
-- **Adaptive layouts** — Optimized UI for every screen size, from phone to desktop
+- **Works on any device** — Phone, tablet, iPad, desktop — pick what suits you
+- **Works offline** — No internet? No problem. Keep taking orders and everything syncs up when you're back online
+- **Print receipts** — Connect a Bluetooth printer or use built-in POS hardware
+- **Scan barcodes** — Use your phone or tablet camera to scan products at checkout
+- **6 modes** — Choose a layout that matches your workflow
+- **Multiple branches** — Switch between locations easily
 
 ## Getting started
 
 <Steps>
   <Step title="Install the app">
-    - **iPhone / iPad** — Download from the App Store
-    - **Android phones and tablets** — Download from the Google Play Store
-    - **Desktop** — Download the macOS, Windows, or Linux build from [qorelly.com](https://qorelly.com)
+    - **iPhone or iPad** — Download from the App Store
+    - **Android phone or tablet** — Download from the Google Play Store
+    - **Mac, Windows, or Linux** — Download from [qorelly.com](https://qorelly.com)
   </Step>
   <Step title="Log in">
-    Use the same email and password as your Qorelly web account.
+    Use the same email and password you use on the web. Everything is connected.
   </Step>
-  <Step title="Select your mode">
-    On first login, the app recommends an [operational mode](/mobile/app-modes) based on your business type. You can accept the recommendation or choose a different mode.
+  <Step title="Pick your mode">
+    The first time you log in, Qorelly suggests a [mode](/mobile/app-modes) based on your business type. You can go with the suggestion or pick a different one.
   </Step>
-  <Step title="Start working">
-    The app opens to your mode's default screen — typically the POS for order-based businesses or the Bookings calendar for appointment-based businesses.
+  <Step title="You're ready">
+    The app opens to the screen that matters most for your business — usually the POS if you're taking orders, or the bookings calendar if you run on appointments.
   </Step>
 </Steps>
 
-## Shared backend
+## Everything stays in sync
 
-QorellyMobile shares the same backend as the Qorelly web platform. This means:
+Whether you're on the web, on your phone, or on a tablet at the counter — it's all the same account and the same data. An order placed on your iPad shows up on the web dashboard. A customer added on the website shows up in the app. Everything is always up to date.
 
-- All data syncs between web and the app in real time
-- Team members, roles, and permissions are consistent across all platforms
-- Orders created on any device appear everywhere else
-- Customer profiles are shared across all platforms
+## Getting around the app
 
-## Navigation
+On phones and tablets, you'll see a tab bar at the bottom of the screen. What tabs you see depends on your [app mode](/mobile/app-modes).
 
-The app uses a bottom tab bar on phones and tablets, with the visible tabs depending on your selected [app mode](/mobile/app-modes).
+On desktop, you get a sidebar on the left — similar to the web dashboard.
 
-On desktop, the navigation adapts to a sidebar layout that makes full use of the larger screen.
-
-The **More** menu provides access to additional features:
+The **More** menu takes you to additional sections:
 
 - Menu Management
 - Team
@@ -71,42 +65,12 @@ The **More** menu provides access to additional features:
 - Locations
 - Help & Support
 
-## Adaptive layouts by screen size
+## The app adapts to your screen
 
-The app automatically adjusts its layout based on screen size:
+The layout changes depending on the size of your screen:
 
-| Screen size | Device examples | Layout |
-|-------------|----------------|--------|
-| Small (< 600px) | iPhones, Android phones | Single-column, bottom tab bar |
-| Medium (600px–1100px) | iPads, Android tablets | Multi-column grids, split views, enhanced calendar |
-| Large (> 1100px) | Desktop, iPad Pro landscape | Full multi-panel layout, sidebar navigation |
+**On a phone** — Everything is in a single column, easy to use with one hand. Navigation is at the bottom.
 
-### Phone layout
-- Single-column interface optimized for one-handed use
-- Bottom tab bar for primary navigation
-- Swipe gestures for common actions
+**On a tablet or iPad** — You get multi-column grids, side-by-side views, and a bigger calendar. Great for counters and front desks.
 
-### Tablet and iPad layout
-- Multi-column grids for menu items (4–5 columns)
-- Split-view screens for order management
-- Larger floor plan view for table management
-- Enhanced bookings calendar with more time slots visible
-- Side-by-side order creation and item browsing
-
-### Desktop layout
-- Full sidebar navigation
-- Multi-panel views with maximum information density
-- Keyboard shortcuts for power users
-- Larger data tables and charts
-
-## App flavors
-
-QorellyMobile is available in three flavors for development and testing:
-
-| Flavor | Purpose | Indicator |
-|--------|---------|-----------|
-| Production | Live app for real use | No banner |
-| Development | For testing new features | Red "DEV" banner |
-| Sandbox | Demo mode with sample data | Amber "DEMO" banner |
-
-Each flavor connects to its own backend instance, so test data never mixes with production data.
+**On desktop** — Full sidebar navigation, multi-panel views, and more space for data tables and charts. Ideal for managers and back-office work.

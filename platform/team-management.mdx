@@ -1,99 +1,89 @@
 ---
 title: "Team Management"
-description: "Invite team members, assign roles, and manage permissions"
+description: "Bring your team on board and control who can do what"
 ---
 
-The Team module lets you invite team members, assign roles with granular permissions, and track team activity.
+Whether you have 2 staff or 200, Qorelly makes it easy to get everyone set up, give them the right access, and keep track of what's happening.
 
-## Team members
+## Your team
 
-Navigate to **Team** to view all members of your organization.
+Go to **Team** to see everyone who's part of your business. For each person you can see:
 
-Each team member has:
+- Their name and email
+- What role they have (Owner, Manager, Cashier, etc.)
+- Their status — whether they've been invited, are active, disabled, or have left
+- When they last logged in
 
-| Field | Description |
-|-------|-------------|
-| Name | Team member's full name |
-| Email | Email address (used for invitations) |
-| Role | Assigned role (owner, manager, cashier, etc.) |
-| PIN | Optional PIN code for terminal mode login |
-| Status | invited, active, disabled, or left |
-| Last login | Most recent login timestamp |
-
-## Inviting team members
+## Inviting someone new
 
 <Steps>
   <Step title="Click Invite">
     On the Team page, click **Invite Member**.
   </Step>
-  <Step title="Enter details">
-    Enter the team member's email address and select a role.
+  <Step title="Enter their email and pick a role">
+    Type in their email address and choose what role they should have.
   </Step>
-  <Step title="Send invitation">
-    The team member receives an email invitation to join your organization.
+  <Step title="They get an email">
+    An invitation lands in their inbox. They just need to click the link to join.
   </Step>
-  <Step title="Member accepts">
-    Once accepted, their status changes from **invited** to **active**.
+  <Step title="They're in">
+    Once they accept, they show up as **active** on your team.
   </Step>
 </Steps>
 
-You can resend invitations if a team member hasn't accepted yet.
+If someone hasn't accepted yet, you can always resend the invitation.
 
 ## Roles
 
-Qorelly includes several built-in roles:
+Roles control what each person can see and do. Qorelly comes with these built-in:
 
-| Role | Description |
-|------|-------------|
-| Owner | Full access to everything (business creator) |
-| Manager | Can manage most operations except billing and danger zone settings |
-| Cashier | POS access for processing orders and payments |
-| Waiter | Can view and create orders, manage tables |
-| Chef | Kitchen-focused — can view and update order preparation status |
+| Role | What they can do |
+|------|-----------------|
+| Owner | Everything — this is whoever created the business |
+| Manager | Run day-to-day operations, manage the team, handle most settings |
+| Cashier | Take orders and process payments |
+| Waiter | View and create orders, manage tables |
+| Chef | See incoming orders and update their status as they're prepared |
 
 <Info>
-  Role labels vary by [business type](/business-types). Spas have "Therapist" and "Stylist" roles, pharmacies have "Pharmacist", etc.
+  The role names change depending on your [business type](/business-types). Spas get "Therapist" and "Stylist", pharmacies get "Pharmacist", and so on.
 </Info>
 
-### Custom roles
+### Create your own roles
 
-Create custom roles with specific permissions tailored to your needs:
+Need something more specific? You can create custom roles:
 
-1. On the Team page, go to the **Roles** section
+1. Go to the **Roles** section on the Team page
 2. Click **Create Role**
-3. Name the role and select permissions for each module
+3. Name it and pick exactly which permissions it should have
 
-## Permissions
+See [Roles & Permissions](/administration/roles-permissions) for the full breakdown of what you can control.
 
-Each role has granular permissions across these modules:
+## Permissions at a glance
 
-| Module | Available actions |
-|--------|------------------|
-| Dashboard | View |
-| Menu | View, Edit, Delete |
-| POS | View, Create, Edit |
-| Inventory | View, Edit |
-| Bookings | View, Create, Edit, Cancel |
-| Customers | View, Edit, Delete |
-| Reports | View, Export |
-| Settings | View, Edit |
-| Team | View, Invite, Manage |
+Each role gets specific permissions for each part of Qorelly:
 
-For a detailed breakdown, see [Roles & Permissions](/administration/roles-permissions).
+| Area | What you can control |
+|------|---------------------|
+| Dashboard | Who can see the overview |
+| Menu | Who can view, edit, or delete items |
+| POS | Who can see, create, or edit orders |
+| Inventory | Who can view or make changes |
+| Bookings | Who can see, create, edit, or cancel bookings |
+| Customers | Who can view, edit, or delete customers |
+| Reports | Who can view or download reports |
+| Settings | Who can see or change settings |
+| Team | Who can view the team, invite people, or manage members |
 
 ## Activity log
 
-The Team page includes an activity log that tracks all team member actions:
+The Team page keeps a log of what everyone's been doing — logins, order actions, and other key events. It's all timestamped, so you always have a clear record.
 
-- Login events with IP address and device info
-- Key actions (order creation, status changes, etc.)
-- Timestamps for full audit trails
-
-## Managing team members
+## Managing your team
 
 For each team member, you can:
 
-- **Change role** — Reassign to a different role
-- **Set PIN** — Configure a PIN for terminal mode access
-- **Disable** — Temporarily suspend access without removing the member
-- **Remove** — Permanently remove from the team
+- **Change their role** — Move them to a different role anytime
+- **Set a PIN** — Give them a PIN code for [terminal mode](/administration/terminal-mode) access
+- **Disable** — Temporarily pause their access without removing them
+- **Remove** — Take them off the team permanently

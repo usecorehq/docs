@@ -1,103 +1,88 @@
 ---
 title: "Inventory Management"
-description: "Track stock levels, suppliers, purchase orders, and movements"
+description: "Keep track of what you have, what you need, and who supplies it"
 ---
 
-The Inventory module provides complete stock management — from tracking current levels and setting reorder points to managing suppliers and purchase orders.
+Running out of stock is never a good look. Qorelly's inventory tools help you stay on top of what you have, know when to reorder, and keep a clear record of every change.
 
-## Inventory dashboard
+## At a glance
 
-The dashboard gives you a quick overview of your inventory health:
+When you open the Inventory section, the dashboard shows you the big picture:
 
-- Total stock items
-- Items below reorder point (low stock alerts)
-- Total stock valuation
-- Recent stock movements
+- How many items you're tracking
+- Which items are running low
+- The total value of your stock
+- Recent stock changes
 
-## Stock items
+## Your stock items
 
-Navigate to **Inventory > Stock** to view and manage all inventory items.
+Go to **Inventory > Stock** to see everything you're tracking.
 
-Each stock item tracks:
+For each item, you can see:
 
-| Field | Description |
+| | What it tells you |
 |-------|-------------|
-| Name | Item name (linked to menu item) |
-| Current quantity | Current stock level |
-| Unit | Unit of measurement |
-| Reorder point | Threshold that triggers a low-stock alert |
-| Unit cost | Cost per unit |
-| Last restocked | Date and user who last restocked |
+| **Name** | The item (linked to your menu) |
+| **Quantity** | How many you have right now |
+| **Unit** | How it's measured (pieces, kg, litres, etc.) |
+| **Reorder point** | The number where you should restock |
+| **Unit cost** | What each one costs you |
+| **Last restocked** | When it was last topped up and by who |
 
 ### Low stock alerts
 
-Items whose current quantity falls below their reorder point are flagged with a visual alert. These appear on both the inventory dashboard and the POS alerts page.
+When any item drops below its reorder point, Qorelly flags it for you. You'll see these alerts on the inventory dashboard and in the POS alerts section — so you never get caught off guard.
 
 ## Suppliers
 
-Navigate to **Inventory > Suppliers** to manage your supplier directory.
+Go to **Inventory > Suppliers** to keep all your supplier information in one place.
 
-For each supplier, you can store:
+For each supplier you can save:
 
-- Company name and contact person
+- Their company name and contact person
 - Phone, email, and address
-- Payment terms
+- Payment terms (like "net 30" or "pay on delivery")
 - Credit limit
-- Active/inactive status
+- Whether they're currently active
 
 ## Purchase orders
 
-Navigate to **Inventory > Purchase Orders** to create and track orders to your suppliers.
+When it's time to restock, go to **Inventory > Purchase Orders** to place an order with your supplier.
 
 ### Creating a purchase order
 
 1. Click **New Purchase Order**
-2. Select a supplier
-3. Add items with quantities and unit prices
-4. Submit the order
+2. Choose which supplier you're ordering from
+3. Add the items you need, with quantities and prices
+4. Submit it
 
-### Purchase order status
+### Tracking your order
 
-| Status | Description |
-|--------|-------------|
-| Draft | Order created but not yet sent |
-| Ordered | Order sent to supplier |
-| Partial | Some items received |
-| Received | All items received |
+| Status | What it means |
+|--------|--------------|
+| Draft | You've started the order but haven't sent it yet |
+| Ordered | It's been sent to the supplier |
+| Partial | Some items have arrived, but not all |
+| Received | Everything's in — stock levels are updated |
 
-### Payment tracking
+You can also track whether you've paid for the order: pending, partially paid, or fully paid.
 
-Purchase orders also track payment status:
+When you mark items as received, your stock quantities update right away.
 
-- **Pending** — Not yet paid
-- **Partial** — Partially paid
-- **Paid** — Fully paid
+## Stock history
 
-When items are received against a purchase order, stock quantities are automatically updated.
+Go to **Inventory > Movements** to see a complete history of every stock change. Every entry records:
 
-## Stock movements
+- **What changed** — Which item and how much
+- **Why** — Was it a purchase, a sale, an adjustment, waste, or a return?
+- **Before and after** — The stock level before and after the change
+- **Who did it** — Which team member made the change
+- **When** — The exact date and time
 
-Navigate to **Inventory > Movements** to view the complete audit trail of stock changes.
+This gives you a full trail you can look back at anytime.
 
-Each movement records:
+## Manual adjustments
 
-| Field | Description |
-|-------|-------------|
-| Type | Purchase, sale, adjustment, waste, or return |
-| Item | Which stock item was affected |
-| Quantity | Amount changed |
-| Before/After | Stock level before and after the movement |
-| Cost | Cost associated with the movement |
-| Performed by | Which team member made the change |
-| Reference | Link to the related order or purchase order |
-| Timestamp | When the movement occurred |
+Sometimes you need to correct your numbers — maybe after a stock count, or to write off damaged goods. Go to **Inventory > Adjustments** to make manual corrections.
 
-## Stock adjustments
-
-Navigate to **Inventory > Adjustments** to manually correct stock levels. Use this for:
-
-- Physical stock counts
-- Damage or spoilage write-offs
-- Corrections after errors
-
-Each adjustment creates a stock movement record for the audit trail.
+Every adjustment is recorded in your stock history, so there's always a clear record of what changed and why.

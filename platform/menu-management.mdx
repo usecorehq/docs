@@ -1,95 +1,95 @@
 ---
 title: "Menu Management"
-description: "Create and organize your menu with categories, items, and pricing"
+description: "Build and organize everything your business offers"
 ---
 
-The Menu module lets you create and manage all items your business offers — whether they are dishes, services, products, or medicines (depending on your [business type](/business-types)).
+This is where you set up everything your business sells or offers — whether that's dishes, services, products, or medicines (it depends on your [business type](/business-types)).
 
 ## Categories
 
-Categories organize your menu items into logical groups. Navigate to **Menu > Categories** to manage them.
+Categories help you group your items so they're easy to find. Go to **Menu > Categories** to manage them.
 
-### Creating categories
+### Creating a category
 
 1. Click **Add Category**
-2. Enter the category name (e.g., "Appetizers", "Main Course", "Beverages")
-3. Optionally add subcategories for more granular organization
-4. Set the display order to control how categories appear on your menu
+2. Give it a name (like "Appetizers", "Main Course", or "Beverages")
+3. You can also add subcategories if you want to get more specific
+4. Set the order you want them to appear in
 
 ### Subcategories
 
-You can nest categories to create a hierarchy. For example:
+You can organize things into layers. For example:
 - **Beverages** (main category)
-  - Hot Drinks (subcategory)
-  - Cold Drinks (subcategory)
-  - Smoothies (subcategory)
+  - Hot Drinks
+  - Cold Drinks
+  - Smoothies
 
-## Menu items
+## Your items
 
-Navigate to **Menu > Items** to manage your menu items.
+Go to **Menu > Items** to see and manage everything you offer.
 
-### Creating a menu item
+### Adding an item
 
-Click **Add Item** and fill in the following fields:
+Click **Add Item** and fill in what you need:
 
-| Field | Description | Required |
-|-------|-------------|----------|
-| Name | The item name displayed to customers | Yes |
-| Description | A brief description of the item | No |
-| Price | The base price | Yes |
-| Category | Which category this item belongs to | Yes |
-| Image | A photo of the item | No |
-| SKU | Stock keeping unit code | No |
-| Barcode | Barcode for POS scanning | No |
+| Field | What it is | Required? |
+|-------|-----------|-----------|
+| Name | What you call it | Yes |
+| Description | A short description for your customers | No |
+| Price | How much it costs | Yes |
+| Category | Which group it belongs to | Yes |
+| Image | A photo to show customers | No |
+| SKU | A code for tracking (helpful for retail) | No |
+| Barcode | For scanning at checkout | No |
 
-### App visibility
+### Choose where items show up
 
-Each menu item can be configured to appear in specific apps. Toggle visibility for:
+Each item can appear in different parts of Qorelly. You decide:
 
-- **Menu** — Appears on the public digital menu
-- **POS** — Available for order creation in the point of sale
-- **Inventory** — Tracked as an inventory item
-- **Bookings** — Available as a bookable service
+- **Menu** — Visible on your public digital menu that customers can see
+- **POS** — Available when your team is creating orders
+- **Inventory** — Tracked as a stock item
+- **Bookings** — Available as something customers can book
 
-### Inventory tracking
+### Track your stock
 
-When inventory tracking is enabled for a menu item, you can set:
+If you want to keep an eye on how much of something you have left, turn on inventory tracking for that item. You can set:
 
-- **Quantity** — Current stock level
-- **Reorder point** — Threshold for low-stock alerts
-- **Supplier** — Linked supplier for reordering
+- **Quantity** — How many you currently have
+- **Reorder point** — When stock drops below this number, you'll get an alert
+- **Supplier** — Who you order it from
 
-### Availability toggle
+### Turn items on and off
 
-Toggle items on or off without deleting them. Unavailable items are hidden from the POS and digital menu but remain in your system.
+If something is temporarily unavailable, just toggle it off. It won't show up in the POS or on your digital menu, but it stays in the system so you can turn it back on whenever you're ready.
 
-## Views
+## Grid view or list view
 
-Switch between two view modes:
+You can switch between two ways to look at your items:
 
-- **Grid view** — Card layout with images, ideal for visual browsing
-- **List view** — Compact table layout for quick management
+- **Grid view** — Shows items as cards with images, great for browsing
+- **List view** — A compact table, great for managing lots of items quickly
 
-Your view preference is saved and persisted across sessions.
+Qorelly remembers which view you prefer.
 
-## Bulk import/export
+## Import and export
 
-For large menus, use the CSV import/export feature:
+Got a big menu? You don't have to add items one by one.
 
-1. Click **Import/Export** in the menu toolbar
-2. **Export** downloads your current menu as a CSV file
-3. **Import** lets you upload a CSV to create or update items in bulk
+1. Click **Import/Export** in the toolbar
+2. **Export** downloads everything as a spreadsheet (CSV file)
+3. **Import** lets you upload a spreadsheet to add or update items in bulk
 
 <Tip>
-  Use the export feature first to get the correct CSV format, then modify and re-import.
+  Export your menu first to see the right format, then edit the spreadsheet and re-import it. Much faster than doing it all by hand.
 </Tip>
 
 ## QR code
 
-Generate a QR code that links directly to your public digital menu:
+Want customers to see your menu on their phones? Generate a QR code:
 
 1. Go to **Menu > QR Code**
-2. Your unique QR code is generated from your restaurant's slug
-3. Download and print the QR code for table cards, posters, or receipts
+2. Download the QR code image
+3. Print it and put it on your tables, door, receipts, or anywhere else
 
-Customers scan the QR code to view your menu on their phone — no app download required. See [Digital Menu](/platform/digital-menu) for more details.
+Customers just scan it with their phone camera and your full menu pops up — no app needed. See [Digital Menu](/platform/digital-menu) for more on how this works.
