@@ -45,17 +45,18 @@
         ]
       },
       {
-        "tab": "Mobile App",
+        "tab": "Apps",
         "groups": [
           {
             "group": "Getting Started",
             "pages": [
               "mobile/overview",
+              "mobile/supported-platforms",
               "mobile/app-modes"
             ]
           },
           {
-            "group": "Mobile Features",
+            "group": "App Features",
             "pages": [
               "mobile/offline-mode",
               "mobile/receipt-printing",
@@ -126,7 +127,9 @@
   "footer": {
     "socials": {
       "x": "https://x.com/qorelly",
-      "instagram": "https://www.instagram.com/useqorelly"
+      "instagram": "https://www.instagram.com/useqorelly",
+      "linkedin": "https://www.linkedin.com/company/qorelly",
+      "youtube": "https://www.youtube.com/@qorelly"
     }
   },
   "description": "Documentation for Qorelly — the business management and POS platform for restaurants, spas, pharmacies, retail stores, fuel stations, and more."
