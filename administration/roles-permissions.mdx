@@ -1,122 +1,102 @@
 ---
 title: "Roles & Permissions"
-description: "Configure granular access control for your team"
+description: "Control exactly what each team member can see and do"
 ---
 
-Qorelly uses role-based access control (RBAC) to determine what each team member can see and do within the platform. Every action is checked against the user's assigned role and its permissions.
+Not everyone on your team needs access to everything. Your cashier doesn't need to change settings, and your chef doesn't need to see customer profiles. Qorelly lets you give each person exactly the access they need — no more, no less.
 
 ## Built-in roles
 
-| Role | Description |
-|------|-------------|
-| Owner | The business creator. Full access to all features, settings, and billing. Cannot be removed. |
-| Manager | Full operational access. Can manage team, orders, inventory, and most settings. |
-| Cashier | POS-focused. Can create and process orders, handle payments. |
-| Waiter | Service-focused. Can view orders, create new orders, and manage table assignments. |
-| Chef | Kitchen-focused. Can view orders and update preparation status. |
+Qorelly comes with roles that cover the most common setups:
+
+| Role | What they can do |
+|------|-----------------|
+| Owner | Full access to absolutely everything. This is whoever created the business. |
+| Manager | Runs the day-to-day. Can manage orders, team, inventory, and most settings. |
+| Cashier | Focused on the POS. Can take orders and handle payments. |
+| Waiter | Can see and create orders, and manage table assignments. |
+| Chef | Can see incoming orders and mark them as prepared or ready. |
 
 <Info>
-  Role names vary by [business type](/business-types). Spas have "Therapist" and "Stylist", pharmacies have "Pharmacist", etc.
+  These role names change based on your [business type](/business-types). Spas get "Therapist" and "Stylist", pharmacies get "Pharmacist", and so on — so the language always makes sense for your business.
 </Info>
 
-## Permission modules
+## What each permission controls
 
-Permissions are organized by module, with specific actions for each:
+Permissions are organized by area. For each area, you can decide what a role is allowed to do:
 
 ### Dashboard
-| Action | Description |
-|--------|-------------|
-| View | See the dashboard overview and metrics |
+- **View** — See the overview and daily numbers
 
 ### Menu
-| Action | Description |
-|--------|-------------|
-| View | Browse menu items and categories |
-| Edit | Create and modify menu items |
-| Delete | Remove menu items |
+- **View** — Browse items and categories
+- **Edit** — Add and change items
+- **Delete** — Remove items
 
 ### POS
-| Action | Description |
-|--------|-------------|
-| View | See orders and order details |
-| Create | Create new orders |
-| Edit | Modify existing orders |
+- **View** — See orders and their details
+- **Create** — Take new orders
+- **Edit** — Make changes to existing orders
 
 ### Inventory
-| Action | Description |
-|--------|-------------|
-| View | See stock levels and movements |
-| Edit | Adjust stock, manage suppliers and purchase orders |
+- **View** — See stock levels and history
+- **Edit** — Adjust stock, manage suppliers, and handle purchase orders
 
 ### Bookings
-| Action | Description |
-|--------|-------------|
-| View | See bookings and calendar |
-| Create | Create new bookings |
-| Edit | Modify bookings |
-| Cancel | Cancel existing bookings |
+- **View** — See the calendar and bookings
+- **Create** — Make new bookings
+- **Edit** — Change booking details
+- **Cancel** — Cancel bookings
 
 ### Customers
-| Action | Description |
-|--------|-------------|
-| View | Browse customer profiles |
-| Edit | Update customer information |
-| Delete | Remove customer records |
+- **View** — Browse customer profiles
+- **Edit** — Update customer information
+- **Delete** — Remove customer records
 
 ### Reports
-| Action | Description |
-|--------|-------------|
-| View | Access reports and analytics |
-| Export | Download report data |
+- **View** — See reports and analytics
+- **Export** — Download report data
 
 ### Settings
-| Action | Description |
-|--------|-------------|
-| View | See business settings |
-| Edit | Modify settings |
+- **View** — Look at business settings
+- **Edit** — Make changes to settings
 
 ### Team
-| Action | Description |
-|--------|-------------|
-| View | See team members |
-| Invite | Invite new team members |
-| Manage | Edit roles, disable, or remove members |
+- **View** — See the team list
+- **Invite** — Bring new people on board
+- **Manage** — Change roles, disable, or remove team members
 
-## Custom roles
+## Creating your own roles
 
-Create roles with exactly the permissions your team needs:
+If the built-in roles don't quite fit, create your own:
 
 <Steps>
-  <Step title="Navigate to Team">
-    Go to **Team** and find the **Roles** section.
+  <Step title="Go to Team">
+    Open the **Team** section and find **Roles**.
   </Step>
   <Step title="Create a new role">
-    Click **Create Role** and give it a name.
+    Click **Create Role** and give it a name that makes sense (like "Shift Lead" or "Front Desk").
   </Step>
-  <Step title="Set permissions">
-    Toggle individual permissions for each module. Select only the actions this role needs.
+  <Step title="Pick the permissions">
+    Go through each area and turn on only what this role needs. Less is more — it's easier to add permissions later than to deal with someone changing things they shouldn't.
   </Step>
-  <Step title="Assign the role">
-    When inviting or editing team members, select your custom role from the role dropdown.
+  <Step title="Assign it">
+    When you invite someone or edit a team member, you can now pick your custom role from the dropdown.
   </Step>
 </Steps>
 
-## How permissions are enforced
+## How it works in practice
 
-Permissions are enforced at two levels:
+Permissions affect two things:
 
-1. **Navigation** — Sidebar items and pages are hidden if the user lacks the `view` permission for that module
-2. **Actions** — Buttons and features (like "New Order" or "Delete") are hidden or disabled based on specific action permissions
+1. **What people see** — If someone doesn't have permission to view a section, it simply doesn't show up in their menu. They won't even know it's there.
+2. **What people can do** — If someone can view orders but not create them, the "New Order" button won't appear for them.
 
-On the web platform, a `ProtectedRoute` component checks permissions before rendering each page. On mobile, the app mode and role work together to control what's visible.
+It's clean and simple. Nobody sees error messages or locked screens — sections they don't have access to just aren't visible.
 
-## Route protection example
+## Good practices
 
-When a team member navigates to a page they don't have access to, they are redirected to the dashboard. There is no error message — the restricted pages simply don't appear in their navigation.
-
-## Best practices
-
-- **Principle of least privilege** — Give each role only the permissions it needs
-- **Use built-in roles first** — They cover the most common patterns. Create custom roles only when needed.
-- **Review regularly** — Audit team member roles periodically to ensure access levels are still appropriate
-- **Test with a new member** — After creating a custom role, log in as a team member with that role to verify the experience
+- **Keep it simple** — Start with the built-in roles. Only create custom ones when you actually need them.
+- **Give the minimum needed** — It's better to start with less access and add more if needed.
+- **Check in regularly** — As roles change in your business, make sure permissions still match.
+- **Test it yourself** — After setting up a new role, try logging in as that team member to see what the experience feels like.

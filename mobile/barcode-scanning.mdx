@@ -1,58 +1,55 @@
 ---
 title: "Barcode Scanning"
-description: "Scan product barcodes for quick item lookup and POS entry"
+description: "Scan products with your phone or tablet camera for faster checkout"
 ---
 
-QorellyMobile uses your device's camera to scan barcodes and QR codes, enabling fast item entry in the POS and inventory management. Barcode scanning is available on phones and tablets (iOS and Android).
+Instead of scrolling through your menu to find an item, just scan its barcode. Point your phone or tablet camera at the barcode and the item is instantly added to the order. It's a huge time-saver, especially for retail and pharmacy businesses.
 
 <Note>
-  Desktop platforms do not currently support camera-based barcode scanning.
+  Barcode scanning works on phones and tablets (iOS and Android). It's not available on desktop since it uses the device camera.
 </Note>
 
-## Supported formats
+## What barcodes work
 
-The scanner supports standard barcode formats including:
+The scanner recognizes all the common formats:
 
-- **1D barcodes** — UPC-A, UPC-E, EAN-8, EAN-13, Code 128, Code 39
-- **2D codes** — QR codes
+- **Standard barcodes** — The ones you see on most products (UPC, EAN, Code 128, Code 39)
+- **QR codes** — Square codes that can hold more information
 
-## Using barcode scanning
+## Scanning during checkout
 
-### POS item entry
+When you're creating an order:
 
-While creating an order in the POS:
+1. Tap the **Scan** icon on the order screen
+2. Point your camera at the product's barcode
+3. Qorelly finds the matching item and adds it to the order automatically
 
-1. Tap the **Scan** icon in the order screen
-2. Point your camera at the product barcode
-3. The app matches the barcode to a menu item by its SKU or barcode field
-4. The item is automatically added to the current order
+It's much faster than searching by name, especially when you're dealing with lots of products.
 
-This is significantly faster than browsing categories or searching by name, especially for retail and pharmacy businesses.
+## Scanning in inventory
 
-### Inventory lookup
+You can also use the scanner when managing stock:
 
-When managing inventory:
-
-1. Open the inventory stock screen
+1. Open the inventory screen
 2. Tap the **Scan** icon
 3. Scan a product barcode
-4. The app opens the matching stock item details
+4. Qorelly pulls up that item's details — current stock, reorder point, and everything else
 
-## Setting up barcodes
+## Setting up your barcodes
 
-For barcode scanning to work, your menu items need barcode or SKU values:
+For scanning to work, your items need to have a barcode or SKU saved in their profile:
 
-1. Go to **Menu > Items** (web or mobile)
-2. Edit an item
-3. Enter the **Barcode** or **SKU** value
-4. Save the item
+1. Go to **Menu > Items** (on the web or in the app)
+2. Edit the item
+3. Add its **Barcode** number or **SKU** code
+4. Save
 
-You can also generate SKU codes automatically from the POS Items management screen.
+You can also generate SKU codes from the POS Items screen if your products don't already have them.
 
 <Tip>
-  Use the CSV bulk import feature on the web platform to add barcodes to many items at once. Export your menu, add the barcode column, and re-import.
+  If you have a lot of items to set up, use the CSV import feature on the web. Export your menu to a spreadsheet, add the barcode column for all your products, and re-import it. Much faster than doing them one by one.
 </Tip>
 
-## Camera permissions
+## Camera permission
 
-The app requires camera access for barcode scanning. When you first use the scanner, your device will prompt you to grant camera permission. If you denied it previously, you can enable it in your device's app settings.
+The first time you try to scan, your device will ask for permission to use the camera. Just tap **Allow**. If you accidentally denied it, you can turn it back on in your device's settings for the Qorelly app.

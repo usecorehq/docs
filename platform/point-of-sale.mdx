@@ -1,113 +1,96 @@
 ---
 title: "Point of Sale"
-description: "Process orders, manage tables, and track payments"
+description: "Take orders, manage payments, and keep things running smoothly"
 ---
 
-The POS module is your central hub for creating and managing orders. It supports dine-in, takeaway, and delivery workflows with real-time status tracking.
+The POS is where you and your team take orders and manage them from start to finish. Whether it's dine-in, takeaway, or delivery, everything happens here.
 
-## POS dashboard
+## Your POS dashboard
 
-The POS dashboard shows all active orders with status filters:
+When you open the POS, you see all your active orders at a glance. You can filter them by:
 
-- **All Active** — Every order that is not yet completed or cancelled
-- **Pending** — New orders awaiting approval
-- **Preparing** — Orders currently being prepared
-- **Ready** — Orders ready for pickup or delivery
+- **All Active** — Everything that's currently in progress
+- **Pending** — New orders waiting to be started
+- **Preparing** — Orders being worked on right now
+- **Ready** — Done and waiting for the customer
 
-Orders automatically refresh every 30 seconds. Each order card displays the table/room, customer name, total amount, and current status.
+The dashboard refreshes automatically, so you're always seeing the latest. Each order shows the table or room, the customer's name, the total, and where it's at in the process.
 
-### Daily stats
+At the top, you'll see today's quick stats — how many orders you've had, how much revenue, and how many are still pending or being prepared.
 
-At the top of the dashboard, you'll see today's key metrics:
-
-- Total orders count
-- Total revenue
-- Pending orders
-- Orders being prepared
-
-## Creating an order
+## Taking a new order
 
 <Note>
-  Creating orders requires the `pos.create` permission. See [Roles & Permissions](/administration/roles-permissions).
+  Your team members need the right permissions to create orders. See [Roles & Permissions](/administration/roles-permissions) for how to set this up.
 </Note>
-
-To create a new order:
 
 <Steps>
   <Step title="Start a new order">
-    Click **New Order** from the POS dashboard or navigate to **POS > New Order**.
+    Click **New Order** from the POS dashboard.
   </Step>
-  <Step title="Select order type">
-    Choose the order type: **Dine-in**, **Takeaway**, or **Delivery**.
+  <Step title="Pick the order type">
+    Is this **Dine-in**, **Takeaway**, or **Delivery**?
   </Step>
-  <Step title="Assign a table (dine-in)">
-    For dine-in orders, select a table from the available tables list.
+  <Step title="Choose a table (for dine-in)">
+    If the customer is eating in, pick their table from the list.
   </Step>
   <Step title="Add items">
-    Browse or search menu items and add them to the order. For each item you can:
-    - Adjust the quantity
-    - Add special notes or instructions
+    Browse your menu or search for what the customer wants. For each item, you can change the quantity and add any special notes (like "no onions" or "extra spicy").
   </Step>
-  <Step title="Assign a customer (optional)">
-    Link the order to an existing customer or create a new customer profile.
+  <Step title="Link a customer (optional)">
+    You can attach the order to an existing customer, or quickly create a new profile right there.
   </Step>
-  <Step title="Submit the order">
-    Review the order summary and submit. The order enters **Pending** status.
+  <Step title="Submit">
+    Review everything and submit. The order is now in the system and your team can start working on it.
   </Step>
 </Steps>
 
-## Order workflow
+## How orders move through the system
 
-Orders follow a status progression:
+Every order follows a natural flow:
 
 ```
 Pending → Preparing → Ready → Completed
                                     ↘ Cancelled
 ```
 
-| Status | Description |
-|--------|-------------|
-| Pending | Order submitted, awaiting kitchen/staff action |
-| Preparing | Order is being prepared |
-| Ready | Order is ready for the customer |
-| Completed | Order delivered and finalized |
-| Cancelled | Order was cancelled (requires confirmation) |
+| Status | What it means |
+|--------|--------------|
+| Pending | Just placed — waiting for your team to pick it up |
+| Preparing | Your team is working on it |
+| Ready | It's done and waiting for the customer |
+| Completed | Delivered and finished |
+| Cancelled | The order was called off (you'll need to confirm this) |
 
 <Info>
-  Status labels adapt to your [business type](/business-types). For example, a spa shows "Being worked on" instead of "Preparing".
+  These labels change depending on your [business type](/business-types). For example, a spa shows "Being worked on" instead of "Preparing" — because that makes more sense.
 </Info>
 
-## Payment tracking
+## Payments
 
-Each order tracks its payment status:
+Each order tracks whether it's been paid:
 
-- **Pending** — No payment received
-- **Paid** — Full payment received
-- **Partially paid** — Partial payment received
+- **Pending** — No payment yet
+- **Paid** — Fully paid
+- **Partially paid** — Some of the amount has been collected
 
-Supported payment methods include cash, card, and QR-based payments.
+Qorelly supports cash, card, and QR-based payments.
 
 ## Order history
 
-Navigate to **POS > History** to view all past orders. You can filter by:
+Want to look back at past orders? Go to **POS > History**. You can filter by date, order status, or payment status. Click on any order to see the full details — what was ordered, who the customer was, how they paid, and when everything happened.
 
-- Date range
-- Order status
-- Payment status
+## Stock alerts
 
-Click any order to view its full details including items, customer, payment, and timestamps.
+If you're tracking inventory, the POS works hand-in-hand with your stock levels:
 
-## Stock management
+- **Low stock alerts** — Go to **POS > Alerts** to see which items are running low
+- **Automatic updates** — When an order is completed, your stock numbers update automatically
 
-The POS integrates with inventory tracking:
+## Managing your POS items
 
-- **Low stock alerts** — Navigate to **POS > Alerts** to see items below their reorder point
-- **Automatic deduction** — When inventory tracking is enabled, stock quantities update when orders are completed
+Go to **POS > Items** to see what's available for ordering. From here you can:
 
-## Managing POS items
-
-Go to **POS > Items** to manage which items are available in the point of sale. You can:
-
-- View current stock levels for each item
-- Toggle item availability
-- Generate SKU codes and barcodes
+- Check stock levels at a glance
+- Turn items on or off
+- Set up SKU codes and barcodes for faster checkout

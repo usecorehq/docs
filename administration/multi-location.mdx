@@ -1,87 +1,72 @@
 ---
 title: "Multi-Location Management"
-description: "Manage multiple branches from a single account"
+description: "Run multiple branches from one account"
 ---
 
-Qorelly supports businesses that operate from multiple physical locations. Each location (branch) has its own data while sharing the same menu, team, and configuration.
+Got more than one branch? Whether it's a chain of restaurants, a spa with multiple outlets, or a retail store with several locations — Qorelly lets you manage them all from a single account.
 
-## Overview
+## Who this is for
 
-Multi-location is designed for businesses like:
+- A restaurant with branches in different neighborhoods
+- A spa with outlets in different parts of town
+- A retail chain with stores across several cities
 
-- A restaurant chain with branches across different neighborhoods
-- A spa with multiple outlets
-- A retail store with several locations
-
-All locations are managed from a single Qorelly account, with the ability to filter and view data per location.
+All your locations live under one Qorelly account. You can see everything together or drill into one specific branch.
 
 ## Setting up locations
 
-See [Locations](/platform/locations) for step-by-step instructions on adding and configuring locations.
+Head to [Locations](/platform/locations) for step-by-step instructions on adding and managing your branches.
 
-## How multi-location works across features
+## How it works across the platform
 
 ### Dashboard
 
-The location selector in the top bar filters all dashboard metrics:
+Pick a location from the top of the screen and everything updates:
 
-- Revenue and order counts reflect the selected location
-- Charts and comparisons are location-specific
-- Switching locations instantly updates all displayed data
+- Revenue and order numbers show that branch's data
+- Charts and comparisons are specific to that location
+- Switching is instant — just pick a different branch
 
 ### POS
 
-- New orders are created under the currently selected location
-- Order history can be filtered by location
-- Daily stats show data for the active location
+- New orders are automatically created under whichever location you've selected
+- Order history can be filtered by branch
+- Daily stats show numbers for the active location
 
 ### Inventory
 
-- Stock levels are tracked per location
-- Each location can have different quantities of the same item
-- Low stock alerts are location-specific
+- Stock is tracked separately at each location
+- The same item can have different quantities at different branches
+- Low stock alerts are specific to each location
 - Purchase orders are tied to a location
 
 ### Bookings
 
 - Tables and rooms belong to specific locations
-- Bookings are filtered by the active location
-- The floor plan is location-specific
+- Bookings are filtered by the active branch
+- Each location has its own floor plan
 
 ### Customers
 
-Customer profiles are shared across all locations. A customer who visits multiple branches has a single profile with combined history from all locations.
+Here's where it's different — **customer profiles are shared** across all your locations. If the same customer visits two of your branches, they have one profile with combined history. You get the full picture of their relationship with your business.
 
 ### Team
 
-Team members can be assigned to specific locations. Their access and permissions apply within their assigned location(s).
+Team members can be assigned to specific locations. Their role and permissions apply at whatever location they're assigned to.
 
-## Data model
+## What's shared vs. what's separate
 
-Each location stores:
-
-| Field | Description |
-|-------|-------------|
-| Name | Branch name |
-| Address | Physical address |
-| City & State | Geographic details |
-| Phone & Email | Branch contact info |
-| Operating hours | Business hours |
-| Active status | Whether the location is currently active |
-
-## Shared vs. location-specific data
-
-| Shared across locations | Specific to each location |
-|------------------------|--------------------------|
+| Shared across all locations | Separate at each location |
+|----------------------------|--------------------------|
 | Menu items and categories | Orders and revenue |
 | Customer profiles | Bookings and reservations |
 | Team member accounts | Stock levels |
 | Business settings | Tables and rooms |
-| Roles and permissions | Floor plan |
+| Roles and permissions | Floor plan layout |
 
-## Best practices
+## Tips
 
-- **Set a default location** — Your most active branch should be the default so it loads first
-- **Name locations clearly** — Use descriptive names like "Victoria Island Branch" rather than "Branch 1"
-- **Review per-location reports** — Compare performance across branches to identify trends
-- **Assign team members** — Ensure each location has the staff it needs
+- **Make your busiest branch the default** — It loads first when you and your team log in
+- **Use clear names** — "Victoria Island Branch" is better than "Branch 1"
+- **Compare locations** — Check reports for different branches to spot trends and opportunities
+- **Assign your team** — Make sure each location has the right people in place

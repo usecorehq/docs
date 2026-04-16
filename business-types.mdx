@@ -1,86 +1,92 @@
 ---
 title: "Business Types"
-description: "How Qorelly adapts to different types of businesses"
+description: "How Qorelly adapts to the way your business works"
 ---
 
-Qorelly supports multiple business types, each with tailored terminology, default modules, and UI configurations. You select your business type during setup, and you can change it later in **Settings > Business**.
+Every business is different. A restaurant doesn't operate the same way a spa does, and a pharmacy has different needs than a retail shop. That's why Qorelly adapts its language, layout, and features based on the type of business you run.
+
+You pick your business type when you first set up, and you can change it anytime in **Settings > Business**.
 
 ## Supported business types
 
 <AccordionGroup>
   <Accordion title="Restaurant" icon="utensils">
-    The default business type. Includes full support for:
-    - **Menu** with dishes organized by categories
-    - **POS** with dine-in, takeaway, and delivery order types
-    - **Tables** and **floor plan** management
-    - **Bookings** for reservations
-    - **Kitchen workflow** — orders move through Pending, Preparing, Ready, Completed
+    The classic setup. Everything you need to run a restaurant:
+    - A **menu** with dishes organized into categories
+    - A **POS** for dine-in, takeaway, and delivery orders
+    - **Tables** and a **floor plan** so you know where everyone is sitting
+    - **Bookings** so customers can reserve ahead of time
+    - A **kitchen workflow** — orders move from Pending to Preparing to Ready to Completed
 
-    **Terminology:** Menu items are called "dishes", staff includes "chefs" and "waiters", locations are "branches".
+    In restaurant mode, your items are called "dishes", your team includes "chefs" and "waiters", and your branches are called "branches".
   </Accordion>
 
   <Accordion title="Spa / Salon" icon="spa">
-    Optimized for appointment-based service businesses:
-    - **Services** replace menu items
-    - **Bookings** is the primary module with time-slot scheduling
-    - **Rooms** for service delivery
-    - **Staff** includes therapists and stylists
+    Built around appointments and services:
+    - Your offerings are called **services** instead of dishes
+    - **Bookings** is the main feature, with time-slot scheduling
+    - You can set up **rooms** for treatments
+    - Your team includes **therapists** and **stylists**
 
-    **Terminology:** Menu items are called "services", order status uses "being worked on" instead of "preparing", staff roles include "therapist" and "stylist".
+    When an order is being worked on, it says "being worked on" instead of "preparing" — because that makes more sense for a spa.
   </Accordion>
 
   <Accordion title="Pharmacy" icon="pills">
-    Tailored for pharmaceutical retail:
-    - **Products** replace menu items with SKU and barcode support
-    - **Inventory** tracking with reorder points and supplier management
-    - **POS** for over-the-counter sales
-    - **Customer** profiles for purchase history
+    Set up for over-the-counter sales and stock management:
+    - Your items are called **medicines**
+    - **Inventory** is front and center with reorder alerts and supplier tracking
+    - The **POS** handles walk-in purchases
+    - **Customer profiles** help you track purchase history
 
-    **Terminology:** Menu items are called "medicines", order status uses "processing", staff includes "pharmacists".
+    Order status says "processing" instead of "preparing", and your team includes **pharmacists**.
   </Accordion>
 
   <Accordion title="Retail" icon="store">
-    For general retail and e-commerce:
-    - **Products** with SKU, barcode, and variant support
-    - **Inventory** management with suppliers and purchase orders
-    - **POS** with barcode scanning
-    - **Customer** management and loyalty
+    For shops of all kinds:
+    - Your items are called **products** and come with barcodes and SKU numbers
+    - **Inventory** tracks what you have and when to restock
+    - The **POS** supports barcode scanning for fast checkout
+    - **Customer management** helps you build loyalty
 
-    **Terminology:** Menu items are called "products", order status uses "packing", locations are "stores".
+    Order status says "packing" instead of "preparing", and your locations are called "stores".
   </Accordion>
 
   <Accordion title="Hospitality" icon="hotel">
     For hotels, lodges, and guest houses:
-    - **Rooms** management
-    - **Bookings** for reservations
-    - **POS** for in-house services
-    - **Customer** guest profiles
+    - Manage your **rooms** and availability
+    - Accept **bookings** and reservations
+    - Use the **POS** for room service and in-house purchases
+    - Keep **guest profiles** for a personal touch
   </Accordion>
 
   <Accordion title="Fuel Station" icon="gas-pump">
-    For fuel stations and convenience stores:
-    - **POS** for fuel and shop sales
-    - **Inventory** for fuel and product tracking
-    - **Shift management** with work periods
+    For fuel stations and attached convenience stores:
+    - The **POS** handles fuel and shop sales
+    - **Inventory** tracks fuel levels and products
+    - **Shift management** helps you hand over between teams
   </Accordion>
 </AccordionGroup>
 
-## How business type affects the platform
+## What changes based on your business type
 
-| Feature | Restaurant | Spa/Salon | Pharmacy | Retail |
+Here's a quick look at how the same features use different language depending on your business:
+
+| | Restaurant | Spa/Salon | Pharmacy | Retail |
 |---------|-----------|----------|----------|--------|
-| Menu item label | Dish | Service | Medicine | Product |
-| Order status (in progress) | Preparing | Being worked on | Processing | Packing |
-| Primary staff roles | Chef, Waiter | Therapist, Stylist | Pharmacist | Manager |
-| Location label | Branch | Outlet | Store | Location |
-| Default modules | Menu, POS, Bookings | Bookings, Menu | POS, Inventory | POS, Inventory |
+| Items are called | Dishes | Services | Medicines | Products |
+| "In progress" says | Preparing | Being worked on | Processing | Packing |
+| Key staff roles | Chef, Waiter | Therapist, Stylist | Pharmacist | Manager |
+| Branches are called | Branches | Outlets | Stores | Locations |
+| Starts with | Menu, POS, Bookings | Bookings, Menu | POS, Inventory | POS, Inventory |
 
 ## Changing your business type
 
+If you need to switch:
+
 1. Go to **Settings > Business**
-2. Select your new business type
-3. The platform will update all terminology and default configurations
+2. Pick your new business type
+3. Everything updates to match — the wording, the defaults, and the layout
 
 <Warning>
-  Changing your business type updates labels and defaults across the platform. Your data (menu items, orders, customers) is preserved, but the way it is displayed will change.
+  Don't worry — changing your business type doesn't delete anything. All your items, orders, and customers stay exactly where they are. Only the way things are labeled and displayed will change.
 </Warning>
