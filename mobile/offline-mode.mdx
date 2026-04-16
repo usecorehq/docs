@@ -1,18 +1,20 @@
 ---
 title: "Offline Mode"
-description: "Continue taking orders even without internet connectivity"
+description: "Continue taking orders without internet — sync automatically when back online"
 ---
 
-QorellyMobile is built with an offline-first architecture, so your business operations don't stop when the internet does. Orders created offline are stored locally and automatically synced when connectivity is restored.
+QorellyMobile is built with an offline-first architecture. Your business operations don't stop when the internet does — on phones, tablets, iPads, and desktop, the app keeps working and syncs everything when connectivity is restored.
 
 ## How it works
 
-The app continuously monitors your network connectivity by checking the connection to the Qorelly servers. When the connection drops:
+The app continuously monitors network connectivity by checking the connection to Qorelly's servers. When the connection drops:
 
 1. An **offline banner** appears at the top of the screen
 2. You can continue creating orders normally
 3. Orders are saved to the device's local SQLite database
 4. When connectivity returns, orders sync automatically in the background
+
+This works the same way on every platform — iPhone, Android phone, iPad, Android tablet, and desktop.
 
 ## What works offline
 
@@ -21,50 +23,95 @@ The app continuously monitors your network connectivity by checking the connecti
 You can create complete orders while offline, including:
 
 - Selecting order type (dine-in, takeaway, delivery)
-- Adding menu items with quantities
-- Adding special instructions
-- Processing payments (cash)
+- Adding menu items with quantities and special instructions
+- Assigning tables (from cached table data)
+- Processing cash payments
 - Completing orders
 
 ### Cached data
 
-The app caches essential data locally so it's available offline:
+The app caches essential data locally so it's available without internet:
 
-| Data | Description |
-|------|-------------|
-| Menu items | All your menu items with names, prices, and images |
-| Categories | Menu categories for browsing |
-| Restaurant info | Business details and settings |
+| Data | Description | Cache behavior |
+|------|-------------|---------------|
+| Menu items | All items with names, prices, and images | Refreshed on every online session |
+| Categories | Menu categories for browsing | Refreshed on every online session |
+| Restaurant info | Business details, settings, and theme | Refreshed on every online session |
+| Images | Menu item photos and logos | Cached for offline display |
 
-This cached data is refreshed automatically whenever the app is online.
+The local cache uses SQLite for structured data and a dedicated image cache for photos.
+
+### What requires internet
+
+Some operations require an active connection:
+
+- Card and QR-based payments
+- Sending booking confirmations to customers
+- Syncing real-time order status between devices
+- Uploading new menu item images
+- Inviting team members
 
 ## Automatic sync
 
 When the device reconnects to the internet:
 
-1. The app detects the connectivity change
-2. All unsynced orders are uploaded to the server
-3. Each order's items and payments are synced
-4. Successfully synced orders are marked as complete
-5. Menu items and categories are refreshed from the server
+<Steps>
+  <Step title="Connectivity detected">
+    The app detects the network change and verifies the connection to Qorelly servers.
+  </Step>
+  <Step title="Queue upload">
+    All unsynced orders are uploaded to the server one by one.
+  </Step>
+  <Step title="Items and payments synced">
+    Each order's line items and payment records are synced alongside the order.
+  </Step>
+  <Step title="Confirmation">
+    Successfully synced orders are marked as complete in the local database.
+  </Step>
+  <Step title="Cache refresh">
+    Menu items, categories, and restaurant data are refreshed from the server to pick up any changes made on other devices.
+  </Step>
+</Steps>
 
-If a sync fails for any order, the error is recorded and the app retries on the next connectivity event. No data is lost.
+If a sync fails for any order, the error is recorded and the app retries on the next connectivity event. **No data is ever lost** — offline orders are stored indefinitely until they are successfully synced.
 
 ## Offline indicators
 
-The app provides clear visual feedback about connectivity:
+The app provides clear visual feedback about your connection status:
 
-- **Online** — No indicator, normal operation
-- **Offline** — Banner displayed, orders saved locally
-- **Syncing** — Brief indicator while uploading queued orders
+| Indicator | Meaning |
+|-----------|---------|
+| No indicator | Online — normal operation |
+| Offline banner | No internet — orders saved locally |
+| Syncing indicator | Reconnected — uploading queued orders |
+
+## Multi-device sync
+
+When you use Qorelly on multiple devices (for example, an iPad at the counter and a phone for table-side orders):
+
+- Each device maintains its own offline queue
+- When both devices come online, their orders sync independently to the server
+- The web dashboard and all other devices see the complete picture once synced
+- There are no conflicts — each offline order gets a unique local ID that maps to a server ID on sync
+
+## Offline on different platforms
+
+| Platform | Offline storage | Sync trigger |
+|----------|----------------|--------------|
+| iPhone / iPad | SQLite database in app sandbox | Automatic on reconnect |
+| Android phone / tablet | SQLite database in app storage | Automatic on reconnect |
+| Desktop (macOS/Windows/Linux) | SQLite database in app data directory | Automatic on reconnect |
+
+The offline behavior is identical across all platforms. The same SQLite schema and sync logic runs everywhere.
 
 ## Best practices
 
 <Tip>
-  Open the app while connected to the internet before going to a location with poor connectivity. This ensures your menu items, categories, and restaurant data are cached and ready for offline use.
+  Open the app while connected to the internet before heading to a location with poor connectivity. This ensures your menu items, categories, and restaurant data are cached and ready for offline use.
 </Tip>
 
-- Keep the app updated to get the latest offline improvements
-- Orders created offline will appear on the web dashboard once synced
-- Cash payments work offline; card payments require connectivity
-- The app stores offline orders until they are successfully synced — there is no expiration
+- **Pre-cache before events** — If you're doing catering or pop-ups with unreliable WiFi, open the app on WiFi first to cache everything
+- **Use cash payments offline** — Card payments need internet, but cash orders work perfectly offline
+- **Check the sync status** — After reconnecting, wait for the syncing indicator to clear before relying on server-side reports
+- **Keep the app updated** — Newer versions include improvements to offline reliability and sync performance
+- **No expiration** — Offline orders are stored until successfully synced, whether that takes minutes, hours, or days
