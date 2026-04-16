@@ -1,19 +1,19 @@
 ---
 title: "App Overview"
-description: "One app for your phone, tablet, iPad, and desktop — wherever you work"
+description: "Qorelly — a cross-platform app for phones, tablets, iPads, and desktop"
 ---
 
-Qorelly isn't just a website. There's also an app you can install on pretty much any device — your iPhone, Android phone, iPad, Android tablet, or even your Mac or Windows computer. It gives you the same features as the web dashboard, designed for whatever screen you're using.
+QorellyMobile is the cross-platform companion to the Qorelly web dashboard. It runs natively on **iOS**, **Android**, **tablets and iPads**, and **desktop** (macOS, Windows, Linux) — all from a single codebase.
 
 ## Where you can use it
 
-| Platform | Devices |
-|----------|---------|
-| iOS | iPhone, iPad, iPad Pro, iPad Mini |
-| Android | Phones and tablets from Samsung, Lenovo, and others |
-| macOS | MacBook, iMac, Mac Mini |
-| Windows | PCs, laptops, Surface devices |
-| Linux | Desktops and laptops |
+| Platform | Devices | Status |
+| --- | --- | --- |
+| iOS | iPhone, iPad, iPad Pro | Available |
+| Android | Phones, tablets | Available |
+| macOS | MacBook, iMac, Mac Mini | Available |
+| Windows | Desktop PCs, laptops | Available |
+| Linux | Desktop PCs, laptops | Available |
 
 Want the full breakdown? See [Supported Platforms](/mobile/supported-platforms).
 
@@ -45,13 +45,7 @@ Want the full breakdown? See [Supported Platforms](/mobile/supported-platforms).
   </Step>
 </Steps>
 
-## Everything stays in sync
-
-Whether you're on the web, on your phone, or on a tablet at the counter — it's all the same account and the same data. An order placed on your iPad shows up on the web dashboard. A customer added on the website shows up in the app. Everything is always up to date.
-
-## Getting around the app
-
-On phones and tablets, you'll see a tab bar at the bottom of the screen. What tabs you see depends on your [app mode](/mobile/app-modes).
+## Navigation
 
 On desktop, you get a sidebar on the left — similar to the web dashboard.
 
@@ -65,12 +59,45 @@ The **More** menu takes you to additional sections:
 - Locations
 - Help & Support
 
-## The app adapts to your screen
+## Adaptive layouts by screen size
+
+The app automatically adjusts its layout based on screen size:
+
+| Screen size | Device examples | Layout |
+| --- | --- | --- |
+| Small (\< 600px) | iPhones, Android phones | Single-column, bottom tab bar |
+| Medium (600px–1100px) | iPads, Android tablets | Multi-column grids, split views, enhanced calendar |
+| Large (\> 1100px) | Desktop, iPad Pro landscape | Full multi-panel layout, sidebar navigation |
+
+### Phone layout
+
+- Single-column interface optimized for one-handed use
+- Bottom tab bar for primary navigation
+- Swipe gestures for common actions
+
+### Tablet and iPad layout
+
+- Multi-column grids for menu items (4–5 columns)
+- Split-view screens for order management
+- Larger floor plan view for table management
+- Enhanced bookings calendar with more time slots visible
+- Side-by-side order creation and item browsing
+
+### Desktop layout
+
+- Full sidebar navigation
+- Multi-panel views with maximum information density
+- Keyboard shortcuts for power users
+- Larger data tables and charts
 
 The layout changes depending on the size of your screen:
 
 **On a phone** — Everything is in a single column, easy to use with one hand. Navigation is at the bottom.
 
-**On a tablet or iPad** — You get multi-column grids, side-by-side views, and a bigger calendar. Great for counters and front desks.
+| Flavor | Purpose | Indicator |
+| --- | --- | --- |
+| Production | Live app for real use | No banner |
+| Development | For testing new features | Red "DEV" banner |
+| Sandbox | Demo mode with sample data | Amber "DEMO" banner |
 
-**On desktop** — Full sidebar navigation, multi-panel views, and more space for data tables and charts. Ideal for managers and back-office work.
+Each flavor connects to its own backend instance, so test data never mixes with production data.
