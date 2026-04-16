@@ -1,0 +1,122 @@
+---
+title: "Roles & Permissions"
+description: "Configure granular access control for your team"
+---
+
+Qorelly uses role-based access control (RBAC) to determine what each team member can see and do within the platform. Every action is checked against the user's assigned role and its permissions.
+
+## Built-in roles
+
+| Role | Description |
+|------|-------------|
+| Owner | The business creator. Full access to all features, settings, and billing. Cannot be removed. |
+| Manager | Full operational access. Can manage team, orders, inventory, and most settings. |
+| Cashier | POS-focused. Can create and process orders, handle payments. |
+| Waiter | Service-focused. Can view orders, create new orders, and manage table assignments. |
+| Chef | Kitchen-focused. Can view orders and update preparation status. |
+
+<Info>
+  Role names vary by [business type](/business-types). Spas have "Therapist" and "Stylist", pharmacies have "Pharmacist", etc.
+</Info>
+
+## Permission modules
+
+Permissions are organized by module, with specific actions for each:
+
+### Dashboard
+| Action | Description |
+|--------|-------------|
+| View | See the dashboard overview and metrics |
+
+### Menu
+| Action | Description |
+|--------|-------------|
+| View | Browse menu items and categories |
+| Edit | Create and modify menu items |
+| Delete | Remove menu items |
+
+### POS
+| Action | Description |
+|--------|-------------|
+| View | See orders and order details |
+| Create | Create new orders |
+| Edit | Modify existing orders |
+
+### Inventory
+| Action | Description |
+|--------|-------------|
+| View | See stock levels and movements |
+| Edit | Adjust stock, manage suppliers and purchase orders |
+
+### Bookings
+| Action | Description |
+|--------|-------------|
+| View | See bookings and calendar |
+| Create | Create new bookings |
+| Edit | Modify bookings |
+| Cancel | Cancel existing bookings |
+
+### Customers
+| Action | Description |
+|--------|-------------|
+| View | Browse customer profiles |
+| Edit | Update customer information |
+| Delete | Remove customer records |
+
+### Reports
+| Action | Description |
+|--------|-------------|
+| View | Access reports and analytics |
+| Export | Download report data |
+
+### Settings
+| Action | Description |
+|--------|-------------|
+| View | See business settings |
+| Edit | Modify settings |
+
+### Team
+| Action | Description |
+|--------|-------------|
+| View | See team members |
+| Invite | Invite new team members |
+| Manage | Edit roles, disable, or remove members |
+
+## Custom roles
+
+Create roles with exactly the permissions your team needs:
+
+<Steps>
+  <Step title="Navigate to Team">
+    Go to **Team** and find the **Roles** section.
+  </Step>
+  <Step title="Create a new role">
+    Click **Create Role** and give it a name.
+  </Step>
+  <Step title="Set permissions">
+    Toggle individual permissions for each module. Select only the actions this role needs.
+  </Step>
+  <Step title="Assign the role">
+    When inviting or editing team members, select your custom role from the role dropdown.
+  </Step>
+</Steps>
+
+## How permissions are enforced
+
+Permissions are enforced at two levels:
+
+1. **Navigation** — Sidebar items and pages are hidden if the user lacks the `view` permission for that module
+2. **Actions** — Buttons and features (like "New Order" or "Delete") are hidden or disabled based on specific action permissions
+
+On the web platform, a `ProtectedRoute` component checks permissions before rendering each page. On mobile, the app mode and role work together to control what's visible.
+
+## Route protection example
+
+When a team member navigates to a page they don't have access to, they are redirected to the dashboard. There is no error message — the restricted pages simply don't appear in their navigation.
+
+## Best practices
+
+- **Principle of least privilege** — Give each role only the permissions it needs
+- **Use built-in roles first** — They cover the most common patterns. Create custom roles only when needed.
+- **Review regularly** — Audit team member roles periodically to ensure access levels are still appropriate
+- **Test with a new member** — After creating a custom role, log in as a team member with that role to verify the experience

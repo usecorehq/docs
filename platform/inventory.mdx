@@ -1,0 +1,103 @@
+---
+title: "Inventory Management"
+description: "Track stock levels, suppliers, purchase orders, and movements"
+---
+
+The Inventory module provides complete stock management — from tracking current levels and setting reorder points to managing suppliers and purchase orders.
+
+## Inventory dashboard
+
+The dashboard gives you a quick overview of your inventory health:
+
+- Total stock items
+- Items below reorder point (low stock alerts)
+- Total stock valuation
+- Recent stock movements
+
+## Stock items
+
+Navigate to **Inventory > Stock** to view and manage all inventory items.
+
+Each stock item tracks:
+
+| Field | Description |
+|-------|-------------|
+| Name | Item name (linked to menu item) |
+| Current quantity | Current stock level |
+| Unit | Unit of measurement |
+| Reorder point | Threshold that triggers a low-stock alert |
+| Unit cost | Cost per unit |
+| Last restocked | Date and user who last restocked |
+
+### Low stock alerts
+
+Items whose current quantity falls below their reorder point are flagged with a visual alert. These appear on both the inventory dashboard and the POS alerts page.
+
+## Suppliers
+
+Navigate to **Inventory > Suppliers** to manage your supplier directory.
+
+For each supplier, you can store:
+
+- Company name and contact person
+- Phone, email, and address
+- Payment terms
+- Credit limit
+- Active/inactive status
+
+## Purchase orders
+
+Navigate to **Inventory > Purchase Orders** to create and track orders to your suppliers.
+
+### Creating a purchase order
+
+1. Click **New Purchase Order**
+2. Select a supplier
+3. Add items with quantities and unit prices
+4. Submit the order
+
+### Purchase order status
+
+| Status | Description |
+|--------|-------------|
+| Draft | Order created but not yet sent |
+| Ordered | Order sent to supplier |
+| Partial | Some items received |
+| Received | All items received |
+
+### Payment tracking
+
+Purchase orders also track payment status:
+
+- **Pending** — Not yet paid
+- **Partial** — Partially paid
+- **Paid** — Fully paid
+
+When items are received against a purchase order, stock quantities are automatically updated.
+
+## Stock movements
+
+Navigate to **Inventory > Movements** to view the complete audit trail of stock changes.
+
+Each movement records:
+
+| Field | Description |
+|-------|-------------|
+| Type | Purchase, sale, adjustment, waste, or return |
+| Item | Which stock item was affected |
+| Quantity | Amount changed |
+| Before/After | Stock level before and after the movement |
+| Cost | Cost associated with the movement |
+| Performed by | Which team member made the change |
+| Reference | Link to the related order or purchase order |
+| Timestamp | When the movement occurred |
+
+## Stock adjustments
+
+Navigate to **Inventory > Adjustments** to manually correct stock levels. Use this for:
+
+- Physical stock counts
+- Damage or spoilage write-offs
+- Corrections after errors
+
+Each adjustment creates a stock movement record for the audit trail.

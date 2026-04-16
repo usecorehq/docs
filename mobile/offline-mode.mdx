@@ -1,0 +1,70 @@
+---
+title: "Offline Mode"
+description: "Continue taking orders even without internet connectivity"
+---
+
+QorellyMobile is built with an offline-first architecture, so your business operations don't stop when the internet does. Orders created offline are stored locally and automatically synced when connectivity is restored.
+
+## How it works
+
+The app continuously monitors your network connectivity by checking the connection to the Qorelly servers. When the connection drops:
+
+1. An **offline banner** appears at the top of the screen
+2. You can continue creating orders normally
+3. Orders are saved to the device's local SQLite database
+4. When connectivity returns, orders sync automatically in the background
+
+## What works offline
+
+### Order creation
+
+You can create complete orders while offline, including:
+
+- Selecting order type (dine-in, takeaway, delivery)
+- Adding menu items with quantities
+- Adding special instructions
+- Processing payments (cash)
+- Completing orders
+
+### Cached data
+
+The app caches essential data locally so it's available offline:
+
+| Data | Description |
+|------|-------------|
+| Menu items | All your menu items with names, prices, and images |
+| Categories | Menu categories for browsing |
+| Restaurant info | Business details and settings |
+
+This cached data is refreshed automatically whenever the app is online.
+
+## Automatic sync
+
+When the device reconnects to the internet:
+
+1. The app detects the connectivity change
+2. All unsynced orders are uploaded to the server
+3. Each order's items and payments are synced
+4. Successfully synced orders are marked as complete
+5. Menu items and categories are refreshed from the server
+
+If a sync fails for any order, the error is recorded and the app retries on the next connectivity event. No data is lost.
+
+## Offline indicators
+
+The app provides clear visual feedback about connectivity:
+
+- **Online** — No indicator, normal operation
+- **Offline** — Banner displayed, orders saved locally
+- **Syncing** — Brief indicator while uploading queued orders
+
+## Best practices
+
+<Tip>
+  Open the app while connected to the internet before going to a location with poor connectivity. This ensures your menu items, categories, and restaurant data are cached and ready for offline use.
+</Tip>
+
+- Keep the app updated to get the latest offline improvements
+- Orders created offline will appear on the web dashboard once synced
+- Cash payments work offline; card payments require connectivity
+- The app stores offline orders until they are successfully synced — there is no expiration

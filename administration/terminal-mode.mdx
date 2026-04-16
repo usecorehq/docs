@@ -1,0 +1,77 @@
+---
+title: "Terminal Mode"
+description: "Shared device access with PIN-based staff login"
+---
+
+Terminal Mode is designed for shared devices like a POS terminal at a counter or a tablet on the shop floor. Instead of each staff member logging in with their email and password, they use a short PIN code.
+
+## How it works
+
+1. An owner or manager sets up a device in Terminal Mode
+2. The device stays logged in to the business account
+3. Individual staff members clock in using their PIN
+4. All actions are attributed to the PIN-authenticated staff member
+5. When done, the staff member locks the terminal
+
+## Setting up Terminal Mode
+
+### On the web
+
+1. Navigate to `/auth/terminal-login`
+2. The device enters Terminal Mode and displays a PIN entry screen
+3. Staff members enter their PIN to access the system
+
+### Assigning PINs
+
+Each team member needs a PIN to use Terminal Mode:
+
+1. Go to **Team**
+2. Edit a team member
+3. Set their **PIN code** (typically 4-6 digits)
+4. Save
+
+<Warning>
+  PINs should be unique per team member within your business. Avoid simple sequences like 1234 or 0000.
+</Warning>
+
+## What staff can access
+
+In Terminal Mode, access is simplified to the most common operational tasks:
+
+- **POS** — Create and manage orders
+- **Bookings** — View and manage reservations
+- **Order history** — Review recent orders
+
+Administrative features like settings, team management, and reports are not accessible in Terminal Mode.
+
+## Terminal lock screen
+
+When no staff member is actively using the terminal, a lock screen is displayed. To unlock:
+
+1. The staff member enters their PIN
+2. The system verifies the PIN against team member records
+3. On success, the terminal opens with the staff member's session
+4. All subsequent actions are logged under that staff member
+
+## Staff session tracking
+
+Terminal Mode tracks:
+
+- Which staff member is currently active
+- When they clocked in
+- All orders and actions during their session
+
+This data feeds into the team activity log for accountability and reporting.
+
+## Exiting Terminal Mode
+
+To exit Terminal Mode and return to normal login:
+
+1. An owner or manager can disable Terminal Mode from the device
+2. The device returns to the standard login screen
+
+## Use cases
+
+- **Restaurant counter** — A shared tablet where waiters and cashiers take turns
+- **Retail checkout** — A POS terminal used by multiple cashiers across shifts
+- **Salon front desk** — A shared device where receptionists manage bookings

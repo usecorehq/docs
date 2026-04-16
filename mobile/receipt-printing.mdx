@@ -1,0 +1,73 @@
+---
+title: "Receipt Printing"
+description: "Print receipts via Bluetooth thermal printers or native POS hardware"
+---
+
+QorellyMobile supports receipt printing through two methods: Bluetooth thermal printers and native POS hardware integration.
+
+## Bluetooth thermal printers
+
+The most common setup for small businesses. Works with standard 58mm and 80mm Bluetooth thermal printers.
+
+### Setting up a Bluetooth printer
+
+<Steps>
+  <Step title="Turn on the printer">
+    Power on your Bluetooth thermal printer and ensure it is in pairing mode.
+  </Step>
+  <Step title="Pair with your device">
+    Go to your phone or tablet's Bluetooth settings and pair with the printer.
+  </Step>
+  <Step title="Connect in QorellyMobile">
+    The app automatically detects paired Bluetooth printers. Select your printer from the available devices list.
+  </Step>
+  <Step title="Test print">
+    Print a test receipt to verify the connection and print quality.
+  </Step>
+</Steps>
+
+## Native POS hardware
+
+For businesses using dedicated POS terminals (such as Sunyard devices), the app integrates directly with the built-in printer hardware.
+
+Native POS printing:
+- Uses the device's built-in thermal printer
+- No Bluetooth pairing required
+- Faster print speed
+- Supports the device's specific paper width
+
+## Receipt contents
+
+Printed receipts include:
+
+- **Business logo** (if configured)
+- **Business name** and contact details
+- **Order number** and date/time
+- **Order items** with quantities and prices
+- **Subtotal, discounts, and total**
+- **Payment method**
+- **Staff member** who processed the order
+
+## Printing from orders
+
+You can print a receipt from any completed order:
+
+1. Open the order detail screen
+2. Tap the **Print** button
+3. The receipt prints on the connected printer
+
+You can also reprint receipts at any time from the order history.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Printer not found">
+    Ensure the printer is powered on and paired in your device's Bluetooth settings. Restart the printer and try again.
+  </Accordion>
+  <Accordion title="Print quality is poor">
+    Check that you are using the correct paper size for your printer (58mm or 80mm). Replace the thermal paper roll if it is old or damaged.
+  </Accordion>
+  <Accordion title="Printing is slow">
+    Bluetooth printing speed depends on the connection quality. Move closer to the printer and ensure there are no obstructions.
+  </Accordion>
+</AccordionGroup>

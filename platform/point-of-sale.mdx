@@ -1,0 +1,113 @@
+---
+title: "Point of Sale"
+description: "Process orders, manage tables, and track payments"
+---
+
+The POS module is your central hub for creating and managing orders. It supports dine-in, takeaway, and delivery workflows with real-time status tracking.
+
+## POS dashboard
+
+The POS dashboard shows all active orders with status filters:
+
+- **All Active** — Every order that is not yet completed or cancelled
+- **Pending** — New orders awaiting approval
+- **Preparing** — Orders currently being prepared
+- **Ready** — Orders ready for pickup or delivery
+
+Orders automatically refresh every 30 seconds. Each order card displays the table/room, customer name, total amount, and current status.
+
+### Daily stats
+
+At the top of the dashboard, you'll see today's key metrics:
+
+- Total orders count
+- Total revenue
+- Pending orders
+- Orders being prepared
+
+## Creating an order
+
+<Note>
+  Creating orders requires the `pos.create` permission. See [Roles & Permissions](/administration/roles-permissions).
+</Note>
+
+To create a new order:
+
+<Steps>
+  <Step title="Start a new order">
+    Click **New Order** from the POS dashboard or navigate to **POS > New Order**.
+  </Step>
+  <Step title="Select order type">
+    Choose the order type: **Dine-in**, **Takeaway**, or **Delivery**.
+  </Step>
+  <Step title="Assign a table (dine-in)">
+    For dine-in orders, select a table from the available tables list.
+  </Step>
+  <Step title="Add items">
+    Browse or search menu items and add them to the order. For each item you can:
+    - Adjust the quantity
+    - Add special notes or instructions
+  </Step>
+  <Step title="Assign a customer (optional)">
+    Link the order to an existing customer or create a new customer profile.
+  </Step>
+  <Step title="Submit the order">
+    Review the order summary and submit. The order enters **Pending** status.
+  </Step>
+</Steps>
+
+## Order workflow
+
+Orders follow a status progression:
+
+```
+Pending → Preparing → Ready → Completed
+                                    ↘ Cancelled
+```
+
+| Status | Description |
+|--------|-------------|
+| Pending | Order submitted, awaiting kitchen/staff action |
+| Preparing | Order is being prepared |
+| Ready | Order is ready for the customer |
+| Completed | Order delivered and finalized |
+| Cancelled | Order was cancelled (requires confirmation) |
+
+<Info>
+  Status labels adapt to your [business type](/business-types). For example, a spa shows "Being worked on" instead of "Preparing".
+</Info>
+
+## Payment tracking
+
+Each order tracks its payment status:
+
+- **Pending** — No payment received
+- **Paid** — Full payment received
+- **Partially paid** — Partial payment received
+
+Supported payment methods include cash, card, and QR-based payments.
+
+## Order history
+
+Navigate to **POS > History** to view all past orders. You can filter by:
+
+- Date range
+- Order status
+- Payment status
+
+Click any order to view its full details including items, customer, payment, and timestamps.
+
+## Stock management
+
+The POS integrates with inventory tracking:
+
+- **Low stock alerts** — Navigate to **POS > Alerts** to see items below their reorder point
+- **Automatic deduction** — When inventory tracking is enabled, stock quantities update when orders are completed
+
+## Managing POS items
+
+Go to **POS > Items** to manage which items are available in the point of sale. You can:
+
+- View current stock levels for each item
+- Toggle item availability
+- Generate SKU codes and barcodes
