@@ -1,88 +1,185 @@
 ---
 title: "Inventory Management"
-description: "Keep track of what you have, what you need, and who supplies it"
+description: "Keep track of what you have, what you need, and who supplies it."
 ---
 
-Running out of stock is never a good look. Qorelly's inventory tools help you stay on top of what you have, know when to reorder, and keep a clear record of every change.
+Inventory tracks your stock levels, suppliers, and every change to your stock — automatically or manually. When a POS order is completed, stock quantities update on their own for any linked items. You don't have to count manually after every sale.
 
-## At a glance
+<img
+  src="/images/inventory-overview-PLACEHOLDER.png"
+  alt="Inventory overview showing stat cards, low stock panel, and recent movements"
+/>
 
-When you open the Inventory section, the dashboard shows you the big picture:
+## Overview
 
-- How many items you're tracking
-- Which items are running low
-- The total value of your stock
-- Recent stock changes
+When you open Inventory, the dashboard gives you the big picture at a glance:
 
-## Your stock items
+| Card | What it shows |
+|------|--------------|
+| **Total items tracked** | How many menu items are linked to inventory |
+| **Low stock alerts** | Items currently at or below their reorder point |
+| **Total stock value** | The combined value of all your current stock in ₦ |
+| **Pending orders** | Purchase orders you've placed but haven't received yet |
 
-Go to **Inventory > Stock** to see everything you're tracking.
+The **Recent Movements** panel on the right shows the last 5 stock changes — sales (red), purchases (green), and manual adjustments (orange).
 
-For each item, you can see:
+---
 
-| | What it tells you |
-|-------|-------------|
-| **Name** | The item (linked to your menu) |
-| **Quantity** | How many you have right now |
-| **Unit** | How it's measured (pieces, kg, litres, etc.) |
-| **Reorder point** | The number where you should restock |
-| **Unit cost** | What each one costs you |
-| **Last restocked** | When it was last topped up and by who |
+## Stock items
 
-### Low stock alerts
+Go to **Inventory > Stock Items** to see everything you're tracking.
 
-When any item drops below its reorder point, Qorelly flags it for you. You'll see these alerts on the inventory dashboard and in the POS alerts section  so you never get caught off guard.
+<img
+  src="/images/inventory-stock-items-PLACEHOLDER.png"
+  alt="Stock items list showing quantity, reorder point, unit cost, and status"
+/>
+
+For each item you can see:
+
+| Column | What it tells you |
+|--------|------------------|
+| **Item** | The menu item this stock is linked to |
+| **Stock** | Current quantity with unit (kg, bottles, units, etc.) |
+| **Reorder point** | The quantity that triggers a low stock alert |
+| **Unit cost** | What each unit costs you |
+| **Total value** | Current stock × unit cost |
+| **Status** | In Stock, Low Stock, or Out of Stock |
+
+### Status meanings
+
+- **In Stock** — quantity is above the reorder point
+- **Low Stock** — quantity is at or below the reorder point. A low stock alert fires on your dashboard and in POS alerts.
+- **Out of Stock** — quantity is zero
+
+### Tracking a new item
+
+Click **Track New Item** (top right) to start tracking a menu item. You'll set:
+
+- The unit of measurement (kg, bottles, units, etc.)
+- The reorder point — the number that triggers a low stock alert
+- The unit cost — what each unit costs you to buy
+
+<Note>
+  An item must exist in your menu before you can track it in inventory. If you can't find an item, add it to your menu first, then come back here.
+</Note>
+
+---
 
 ## Suppliers
 
 Go to **Inventory > Suppliers** to keep all your supplier information in one place.
 
+<img
+  src="/images/inventory-suppliers-PLACEHOLDER.png"
+  alt="Suppliers list with contact details and payment terms"
+/>
+
 For each supplier you can save:
 
-- Their company name and contact person
+- Company name and contact person
 - Phone, email, and address
-- Payment terms (like "net 30" or "pay on delivery")
+- Payment terms (e.g. "cash on delivery", "net 30")
 - Credit limit
-- Whether they're currently active
+- Active or inactive status
+
+Suppliers are linked to purchase orders — so when you restock, you can pull their details directly without re-entering them.
+
+---
 
 ## Purchase orders
 
-When it's time to restock, go to **Inventory > Purchase Orders** to place an order with your supplier.
+Go to **Inventory > Purchase Orders** when it's time to restock.
 
 ### Creating a purchase order
 
 1. Click **New Purchase Order**
-2. Choose which supplier you're ordering from
-3. Add the items you need, with quantities and prices
-4. Submit it
+2. Choose the supplier you're ordering from
+3. Add the items you need with quantities and prices
+4. Submit the order
 
 ### Tracking your order
 
 | Status | What it means |
 |--------|--------------|
-| Draft | You've started the order but haven't sent it yet |
-| Ordered | It's been sent to the supplier |
-| Partial | Some items have arrived, but not all |
-| Received | Everything's in  stock levels are updated |
+| **Draft** | Started but not submitted yet |
+| **Ordered** | Submitted to the supplier |
+| **Partial** | Some items have arrived, not all |
+| **Received** | Everything arrived — stock levels updated automatically |
 
-You can also track whether you've paid for the order: pending, partially paid, or fully paid.
+Payment status is tracked separately: Pending, Partially Paid, or Paid.
 
-When you mark items as received, your stock quantities update right away.
+When you mark a purchase order as Received, your stock quantities update immediately.
 
-## Stock history
+---
 
-Go to **Inventory > Movements** to see a complete history of every stock change. Every entry records:
+## Stock movements
 
-- **What changed**  Which item and how much
-- **Why**  Was it a purchase, a sale, an adjustment, waste, or a return?
-- **Before and after**  The stock level before and after the change
-- **Who did it**  Which team member made the change
-- **When**  The exact date and time
+Go to **Inventory > Movements** to see a complete audit trail of every stock change.
 
-This gives you a full trail you can look back at anytime.
+<img
+  src="/images/inventory-movements-PLACEHOLDER.png"
+  alt="Stock movements list with type badges, before/after columns, and reason"
+/>
+
+Filter by type using the tabs at the top: **All**, **Purchases**, **Sales**, or **Adjustments**.
+
+Each entry records:
+
+| Column | What it shows |
+|--------|--------------|
+| **Item** | Which stock item changed |
+| **Type** | Sale, Purchase, or Adjustment |
+| **Quantity** | How much changed (red = decrease, green = increase) |
+| **Before → After** | Stock level before and after the change |
+| **Reason** | For adjustments — why the change was made |
+| **Date** | Exact date and time |
+
+Sales entries are created automatically when a POS order is completed. Purchase entries are created when a purchase order is marked as received. Only adjustments are made manually.
+
+---
 
 ## Manual adjustments
 
-Sometimes you need to correct your numbers  maybe after a stock count, or to write off damaged goods. Go to **Inventory > Adjustments** to make manual corrections.
+Go to **Inventory > Adjustments** when you need to correct your stock numbers — for example after a physical count, or to write off damaged goods.
 
-Every adjustment is recorded in your stock history, so there's always a clear record of what changed and why.
+<img
+  src="/images/inventory-adjustment-PLACEHOLDER.png"
+  alt="New stock adjustment modal with type selector and reason dropdown"
+/>
+
+### Adjustment types
+
+| Type | When to use it |
+|------|---------------|
+| **Increase** | You have more stock than the system shows — add the difference |
+| **Decrease** | You have less stock than the system shows — subtract the difference |
+| **Recount** | You've done a full physical count — set the exact new number directly |
+
+<Tip>
+  Use **Recount** after a physical stock count. Instead of calculating the difference yourself, just enter what you actually have and Qorelly does the rest.
+</Tip>
+
+### Reason options
+
+Always pick a reason — it appears in your audit trail:
+
+- Received Shipment
+- Damaged Goods
+- Expired
+- Theft / Loss
+- Stock Recount
+- Data Correction
+- Other
+
+---
+
+## Troubleshooting
+
+**Stock didn't decrease after a completed order**
+The menu item may not be linked to a stock item. Go to **Stock Items** and check if the item appears. If not, click **Track New Item** and link it.
+
+**Stock value looks wrong**
+Check the unit cost set for that item. Go to **Stock Items**, click the edit icon on the item, and confirm the cost per unit is correct.
+
+**I adjusted stock but can't see it in movements**
+All adjustments appear in **Inventory > Movements** under the Adjustments tab. If it's missing, the adjustment may not have been saved — try again and confirm you clicked **Record Adjustment**.

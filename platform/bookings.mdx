@@ -1,97 +1,143 @@
 ---
 title: "Bookings & Reservations"
-description: "Let customers book tables, rooms, or appointments  and manage it all in one place"
+description: "Let customers book tables, rooms, or appointments — and manage it all in one place."
 ---
 
-Whether it's a dinner reservation, a spa appointment, or a consultation, Qorelly makes it easy to manage bookings. You get a calendar view, table and room management, staff assignment, and even the option to let customers book directly from your digital menu.
+Bookings lets you take and manage reservations for tables, rooms, or appointments. You get a calendar view, a full bookings list, a floor plan editor, and real-time notifications when new bookings come in.
 
-## Calendar views
+<img
+  src="/images/bookings-calendar-PLACEHOLDER.png"
+  alt="Bookings calendar showing a confirmed reservation and detail panel"
+/>
 
-Open **Bookings** and you'll see your reservations laid out in a calendar. You can switch between three views:
+## Creating a booking
 
-- **Month**  A bird's-eye view of the whole month
-- **Week**  Hourly slots from 7 AM to 10 PM, great for spotting gaps
-- **Day**  A detailed look at a single day
+Click **New Booking** from the calendar or bookings list.
 
-Click on any booking to see the details or make changes.
+<img
+  src="/images/bookings-new-form-PLACEHOLDER.png"
+  alt="New booking form with customer, date, time, table, and notes fields"
+/>
 
-## What's in a booking
+<Steps>
+  <Step title="Find or add the customer">
+    Search by name to find an existing customer. Linking to an existing profile adds this booking to their history automatically. If they're new, type their name and fill in their phone number — that's all you need.
+  </Step>
+  <Step title="Set the date and time">
+    Pick the reservation date and arrival time. Time slots are free-form — there are no fixed intervals unless you've configured them.
+  </Step>
+  <Step title="Set party size">
+    Enter how many guests are coming. This helps with table allocation.
+  </Step>
+  <Step title="Assign a table (optional)">
+    Choose from your configured tables. You can leave this blank and assign a table when the guest arrives. An orange-highlighted table means it's selected.
+  </Step>
+  <Step title="Add notes">
+    - **Customer notes** — allergies, special requests, preferences. Visible to staff, not shown on any receipt.
+    - **Internal notes** — staff-only information like "VIP guest" or "check ID". Never visible to the customer.
+  </Step>
+  <Step title="Create the booking">
+    Click **Create Booking**. The reservation appears on your calendar and in All Bookings. A notification fires to the bell icon in the top right.
+  </Step>
+</Steps>
 
-Each booking captures:
+---
 
-| | |
-|-------|-------------|
-| **Customer name** | Who made the reservation |
-| **Phone** | Their contact number |
-| **Date & time** | When they're coming |
-| **Party size** | How many people |
-| **Table or room** | Where they'll be seated or served |
-| **Status** | Where the booking stands |
-| **Notes** | Any special requests ("birthday dinner", "window seat", etc.) |
+## Booking status workflow
 
-## How bookings flow
-
-Every booking goes through these stages:
+Every booking moves through a status as the guest progresses through their visit. Update the status from the booking detail panel using the **···** menu.
 
 ```
-Pending → Confirmed → Arrived → Completed
-                                     ↘ Cancelled
+Pending → Confirmed → Arrived → Seated → Completed
+                                             ↘ No Show
+                          ↘ Cancelled
 ```
 
-| Status | What it means |
-|--------|--------------|
-| Pending | A new booking waiting for you to confirm |
-| Confirmed | You've approved it  the customer is expected |
-| Arrived | They're here |
-| Completed | All done |
-| Cancelled | The booking was called off |
+| Status | When to use it |
+|--------|---------------|
+| **Pending** | Just created — not yet acknowledged |
+| **Confirmed** | You've acknowledged the booking and it's happening |
+| **Arrived** | The guest has walked in |
+| **Seated** | The guest is at their table |
+| **Completed** | The visit is done |
+| **Cancelled** | The booking was called off |
+| **No Show** | The guest didn't appear |
 
-### Approving bookings
+<Tip>
+  Keep statuses updated throughout the evening. It helps your front-of-house team know exactly who is in, who's expected, and who didn't show — without asking each other.
+</Tip>
 
-When a new booking comes in, you can approve or decline it with one click right from the dashboard. When you approve a booking, Qorelly automatically creates or updates the customer's profile  so your customer list grows naturally.
+---
 
-## Tables
+## Calendar view
 
-Go to **Bookings > Tables** to set up your tables.
+The calendar is your main view for seeing what's coming up.
 
-For each table, you can:
-- Give it a name or number
-- Set how many people it seats
-- Link it to a room or area
-- Turn it on or off
+<img
+  src="/images/bookings-calendar-detail-PLACEHOLDER.png"
+  alt="Month calendar view with booking labels and detail panel on the right"
+/>
+
+Switch between **Day**, **Week**, and **Month** using the toggle at the top. Month view is best for seeing upcoming availability at a glance. Day view is better during a busy service.
+
+Click any booking label on the calendar to open its detail panel on the right. From there you can see the customer name, time, party size, table, and status — and update them using the **···** menu.
+
+---
+
+## All bookings list
+
+Go to **Bookings > All Bookings** for a searchable, filterable list of every reservation.
+
+<img
+  src="/images/bookings-list-PLACEHOLDER.png"
+  alt="All bookings list with status filter tabs and search"
+/>
+
+Filter by status using the tabs: All, Pending, Confirmed, Arrived, Seated, Completed, Cancelled, No Show.
+
+Search by customer name, phone number, or email to find a specific booking quickly.
+
+---
+
+## Notifications
+
+When a new booking is created, a notification appears on the bell icon in the top right corner.
+
+<img
+  src="/images/bookings-notifications-PLACEHOLDER.png"
+  alt="Notification dropdown showing new booking received"
+/>
+
+Click the bell to see all recent booking notifications. Use **Mark all read** to clear the badge.
+
+---
 
 ## Floor plan
 
-Go to **Bookings > Floor Plan** to arrange your tables visually, just like your actual layout. Drag tables around to match your space.
+Go to **Bookings > Floor Plan** to build a visual map of your tables that matches your physical layout.
 
-<Info>
-  The floor plan works especially well on tablets and iPads  your staff can quickly see which tables are free and tap to take action.
-</Info>
+<img
+  src="/images/bookings-floorplan-PLACEHOLDER.png"
+  alt="Floor plan editor showing tables on a canvas with shape and size controls"
+/>
 
-## Rooms
+### Setting up your floor plan
 
-Go to **Bookings > Rooms** to manage your rooms. These are separate from tables and work for:
+1. Choose a table shape (square or round) from the top-left controls
+2. Set width and height for the selected table
+3. Drag tables on the canvas to match your real layout
+4. Click **Save** when done
 
-- Private dining areas in restaurants
-- Treatment rooms in spas
-- Consultation rooms in pharmacies or clinics
+<Warning>
+  The floor plan editor does not auto-save. Always click **Save** after repositioning tables, or your changes will be lost.
+</Warning>
 
-## Staff assignment
+### Multiple floor plans
 
-Go to **Bookings > Staff** to assign specific team members to bookings. This way, everyone knows who's responsible for which customer.
+Use the panel on the right to switch between floor plans (e.g. Main Floor, Terrace, Private Room) or create a new one. Each floor plan has its own set of tables.
 
-## Let customers book online
+---
 
-You can let customers make their own bookings directly from your [digital menu](/platform/digital-menu) page.
+## Tables
 
-To turn it on:
-1. Go to **Settings > General**
-2. Switch on **Public Booking**
-
-Once it's on, your digital menu shows a **Book a Table** button. Customers can pick a date and time, enter their name and phone number, say how many people, and add any notes.
-
-These bookings come in as **Pending**  you still get to approve or decline them before they're confirmed.
-
-<Tip>
-  Every booking that comes in  whether from your team or from a customer  helps build your customer list automatically. No extra work needed.
-</Tip>
+Go to **Bookings > Tables** to manage your table list — names, capacity, and which floor plan they belong to. Tables you create here appear in the floor plan editor and in the booking form when assigning a table to a reservation.

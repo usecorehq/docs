@@ -1,0 +1,115 @@
+---
+title: "Banking"
+description: "Track how money moves through your business — bank accounts for transfers and cash registers for physical tills."
+---
+
+Banking gives you two ways to track money in Qorelly: **bank accounts** for transfer payments, and **cash registers** for physical till locations. Together they give you a clear picture of how revenue is coming in across your business.
+
+<img
+  src="/images/banking-overview-PLACEHOLDER.png"
+  alt="Banking overview"
+/>
+
+## Bank accounts
+
+Bank accounts are used when customers pay by bank transfer. Adding your account details means your account number is shown automatically at checkout — your staff don't need to remember it or write it down.
+
+### Adding a bank account
+
+Go to **Banking > Bank Accounts** and click **Add Bank Account**.
+
+<img
+  src="/images/banking-add-account-PLACEHOLDER.png"
+  alt="Add bank account form"
+/>
+
+Fill in the following:
+
+| Field | What to enter |
+|-------|--------------|
+| **Label** | A nickname for this account — e.g. "Main Company Pocket". Only visible to you. |
+| **Bank name** | Your bank — e.g. Kuda, GTB, Access |
+| **Account name** | The name on the account |
+| **Account number** | Your full account number |
+| **Currency** | Defaults to NGN |
+
+Check **Set as default bank account** if this is the account you want shown at checkout. You can add multiple accounts but only one can be the default at a time.
+
+<Note>
+  The label is internal only — your customers never see it. Use it to tell accounts apart if you have more than one.
+</Note>
+
+---
+
+## Cash registers
+
+Cash registers track cash payments by physical till location. If you have more than one till — for example a front counter and a bar — you can set up a register for each one and track them separately.
+
+### Adding a cash register
+
+Go to **Banking > Cash Registers** and click **Add Register**.
+
+<img
+  src="/images/banking-add-register-PLACEHOLDER.png"
+  alt="Add cash register form"
+/>
+
+| Field | What to enter |
+|-------|--------------|
+| **Name** | Name it by location — e.g. "Register A, Front Till" or "Bar Till" |
+| **Description** | Optional — e.g. "Near the kitchen entrance" |
+| **Opening balance** | The cash already in the till at the start of a shift |
+| **Notes** | Internal note, e.g. which cashier is assigned |
+
+Check **Set as default register for this location** if this is the primary till. The default register is auto-selected whenever a customer pays with cash in POS.
+
+<img
+  src="/images/banking-register-list-PLACEHOLDER.png"
+  alt="Cash register list showing opening and current balance"
+/>
+
+### Reading the register balance
+
+Once set up, each register shows two numbers:
+
+- **Opening** — the starting balance you entered when creating the register
+- **Current** — opening balance plus all cash collected from sales
+
+The difference between these two is your cash takings for the period.
+
+---
+
+## Banking settings
+
+Go to **Banking > Settings** to control which banking features appear in your sidebar.
+
+<img
+  src="/images/banking-settings-PLACEHOLDER.png"
+  alt="Banking settings toggles"
+/>
+
+| Toggle | What it controls |
+|--------|-----------------|
+| **Bank Accounts** | Shows or hides the bank accounts section in your sidebar |
+| **Cash Registers** | Shows or hides cash registers in your sidebar |
+
+<Info>
+  Wallets and Settings always appear in the Banking menu and cannot be hidden.
+</Info>
+
+Turn off features your business doesn't use to keep the sidebar clean. For example, a delivery-only business that never takes cash can hide Cash Registers entirely.
+
+---
+
+## How banking connects to POS
+
+When a customer pays at checkout, your staff choose a payment method. Qorelly uses your banking setup to make this smooth:
+
+- **Bank transfer** — shows your default bank account number automatically
+- **Cash** — assigns the payment to your default cash register automatically
+
+Both can be overridden per transaction if needed.
+
+<Tip>
+  Set up your bank account and at least one cash register before you start taking orders. Without them, your staff will have to enter payment details manually at checkout.
+</Tip>
