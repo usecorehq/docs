@@ -1,96 +1,129 @@
 ---
 title: "Point of Sale"
-description: "Take orders, manage payments, and keep things running smoothly"
+description: "Take orders, manage payments, and keep things running smoothly."
 ---
 
-The POS is where you and your team take orders and manage them from start to finish. Whether it's dine-in, takeaway, or delivery, everything happens here.
+The POS is where your team takes orders and processes payments from start to finish. Whether it's dine-in, takeaway, or delivery — everything happens here. Every item you add to your menu appears in the POS automatically.
 
-## Your POS dashboard
-
-When you open the POS, you see all your active orders at a glance. You can filter them by:
-
-- **All Active**  Everything that's currently in progress
-- **Pending**  New orders waiting to be started
-- **Preparing**  Orders being worked on right now
-- **Ready**  Done and waiting for the customer
-
-The dashboard refreshes automatically, so you're always seeing the latest. Each order shows the table or room, the customer's name, the total, and where it's at in the process.
-
-At the top, you'll see today's quick stats  how many orders you've had, how much revenue, and how many are still pending or being prepared.
+<img
+  src="/images/pos-new-order-PLACEHOLDER.png"
+  alt="POS new order screen showing menu grid and order panel"
+/>
 
 ## Taking a new order
 
-<Note>
-  Your team members need the right permissions to create orders. See [Roles & Permissions](/administration/roles-permissions) for how to set this up.
-</Note>
+Click **New Sale** from the bottom bar to start an order.
 
 <Steps>
-  <Step title="Start a new order">
-    Click **New Order** from the POS dashboard.
+  <Step title="Choose the order type">
+    Select **Dine-In**, **Takeaway**, or **Delivery** at the top of the order panel. This determines how the order is categorised in your reports and history.
   </Step>
-  <Step title="Pick the order type">
-    Is this **Dine-in**, **Takeaway**, or **Delivery**?
-  </Step>
-  <Step title="Choose a table (for dine-in)">
-    If the customer is eating in, pick their table from the list.
+  <Step title="Select a table (dine-in only)">
+    For dine-in orders, pick the customer's table from the list. Tables come from your floor plan setup under Bookings. If no tables are set up yet, you can skip this.
   </Step>
   <Step title="Add items">
-    Browse your menu or search for what the customer wants. For each item, you can change the quantity and add any special notes (like "no onions" or "extra spicy").
+    Browse your menu or tap a category tab to filter. Tap any item to add it to the order. Use the **+** and **−** buttons to adjust quantity. Tap **Note** on any line item to add a special instruction — e.g. "no onions" or "well done".
   </Step>
   <Step title="Link a customer (optional)">
-    You can attach the order to an existing customer, or quickly create a new profile right there.
+    Tap **Assign staff** or search for a customer to attach the order to their profile. You can also create a new customer right here without leaving the POS.
   </Step>
-  <Step title="Submit">
-    Review everything and submit. The order is now in the system and your team can start working on it.
+  <Step title="Apply a discount (optional)">
+    Enter a percentage or fixed ₦ amount in the discount field. The subtotal, VAT, and total update instantly.
+  </Step>
+  <Step title="Send to prep or pay">
+    - **Send to Prep** — sends the order to the kitchen or prep area without collecting payment yet. The order moves to your active queue.
+    - **Pay** — opens the payment screen immediately. Choose cash, card, or bank transfer.
   </Step>
 </Steps>
 
+---
+
 ## How orders move through the system
 
-Every order follows a natural flow:
+Every order follows this flow:
 
 ```
 Pending → Preparing → Ready → Completed
-                                    ↘ Cancelled
+                                  ↘ Cancelled
 ```
 
 | Status | What it means |
 |--------|--------------|
-| Pending | Just placed  waiting for your team to pick it up |
-| Preparing | Your team is working on it |
-| Ready | It's done and waiting for the customer |
-| Completed | Delivered and finished |
-| Cancelled | The order was called off (you'll need to confirm this) |
+| **Pending** | Just placed — waiting for your team to pick it up |
+| **Preparing** | Your team is actively working on it |
+| **Ready** | Done and waiting for the customer |
+| **Completed** | Delivered and finished |
+| **Cancelled** | Called off — requires confirmation |
 
 <Info>
-  These labels change depending on your [business type](/business-types). For example, a spa shows "Being worked on" instead of "Preparing"  because that makes more sense.
+  The status labels change depending on your business type. A spa shows "Being worked on" instead of "Preparing", and a pharmacy shows "Processing". The flow is the same.
 </Info>
 
-## Payments
+---
 
-Each order tracks whether it's been paid:
+## Your active orders
 
-- **Pending**  No payment yet
-- **Paid**  Fully paid
-- **Partially paid**  Some of the amount has been collected
+Tap **Orders** in the bottom bar to see everything currently in progress. Filter by status to focus on what needs attention:
 
-Qorelly supports cash, card, and QR-based payments.
+- **All Active** — everything in progress
+- **Pending** — orders waiting to be started
+- **Preparing** — orders being worked on
+- **Ready** — done, waiting for the customer
+
+The list refreshes automatically. Each card shows the table or room, customer name, total, and current status.
+
+---
 
 ## Order history
 
-Want to look back at past orders? Go to **POS > History**. You can filter by date, order status, or payment status. Click on any order to see the full details  what was ordered, who the customer was, how they paid, and when everything happened.
+Tap **History** in the bottom bar to see all past orders.
+
+<img
+  src="/images/pos-history-PLACEHOLDER.png"
+  alt="POS order history with date filter and status column"
+/>
+
+You can filter by:
+
+- **Date range** — set a from/to date to narrow results
+- **Status** — filter by All, Completed, Cancelled, etc.
+
+Each row shows the order ID, date and time, order type, customer, total, payment status, and completion status.
+
+Use **Export CSV** (top right) to download your order history as a spreadsheet — useful for accounting or record-keeping.
+
+---
 
 ## Stock alerts
 
 If you're tracking inventory, the POS works hand-in-hand with your stock levels:
 
-- **Low stock alerts**  Go to **POS > Alerts** to see which items are running low
-- **Automatic updates**  When an order is completed, your stock numbers update automatically
+- When an order is completed, stock quantities update automatically for any linked items
+- Go to **More > Alerts** in the bottom bar to see items running low
 
-## Managing your POS items
+---
 
-Go to **POS > Items** to see what's available for ordering. From here you can:
+## Payments
 
-- Check stock levels at a glance
-- Turn items on or off
-- Set up SKU codes and barcodes for faster checkout
+Qorelly supports the following payment methods at checkout:
+
+- **Cash** — assigned to your default cash register automatically
+- **Card** — recorded against the order
+- **Bank transfer** — shows your default bank account number so the customer can transfer
+
+<Tip>
+  Set up your bank account and cash register under **Banking** before you start taking orders. Without them, staff will need to enter payment details manually each time.
+</Tip>
+
+---
+
+## Troubleshooting
+
+**Stock didn't update after a completed order**
+Check that the menu item is linked to a stock item. Go to **Inventory > Stock Items** and confirm the item appears there. If it's missing, add it using **Track New Item** and link it to the menu item.
+
+**A team member can't create orders**
+Check their role permissions. Go to **Team**, open their profile, and confirm their role has "Create orders" enabled. See [Roles & Permissions](/administration/roles-permissions) for details.
+
+**The wrong table is showing at checkout**
+Tables come from your floor plan. Go to **Bookings > Floor Plan** to check that your tables are saved correctly.
