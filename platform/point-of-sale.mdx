@@ -3,11 +3,19 @@ title: "Point of Sale"
 description: "Take orders, manage payments, and keep things running smoothly."
 ---
 
+import { AnnotatedScreenshot } from '/snippets/annotated-screenshot'
+
 The POS is where your team takes orders and processes payments from start to finish. Whether it's dine-in, takeaway, or delivery — everything happens here. Every item you add to your menu appears in the POS automatically.
 
-<img
-  src="/images/pos-new-order.png"
-  alt="POS new order screen showing menu grid and order panel"
+<AnnotatedScreenshot
+  desktopSrc="/images/pos-new-order.png"
+  callouts={[
+    { id: 1, x: '8%',  y: '5%',  target: 'desktop', title: 'Category filter tabs', body: 'Tap a category to filter the menu grid below.' },
+    { id: 2, x: '77%', y: '5%',  target: 'desktop', title: 'Order type',            body: 'Choose Dine-In, Takeaway, or Delivery before adding items.' },
+    { id: 3, x: '77%', y: '32%', target: 'desktop', title: 'Line items',            body: 'Each item added appears here with quantity controls.' },
+    { id: 4, x: '77%', y: '72%', target: 'desktop', title: 'Discount + total',      body: 'Apply a % or fixed discount. VAT updates instantly.' },
+    { id: 5, x: '77%', y: '88%', target: 'desktop', title: 'Send to Prep / Pay',   body: 'Send to kitchen without payment, or pay immediately.' },
+  ]}
 />
 
 ## Taking a new order
