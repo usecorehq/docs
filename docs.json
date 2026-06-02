@@ -29,6 +29,7 @@
               "platform/point-of-sale",
               "platform/inventory",
               "platform/bookings",
+              "platform/banking",
               "platform/customers",
               "platform/team-management",
               "platform/digital-menu"
@@ -132,5 +133,5 @@
       "youtube": "https://www.youtube.com/@qorelly"
     }
   },
-  "description": "Documentation for Qorelly  the business management and POS platform for restaurants, spas, pharmacies, retail stores, fuel stations, and more."
+  "description": "Documentation for Qorelly the business management and POS platform for restaurants, spas, pharmacies, retail stores, fuel stations, and more."
 }
