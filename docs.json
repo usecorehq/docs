@@ -61,6 +61,9 @@
           {
             "group": "App Features",
             "pages": [
+              "mobile/sale-and-checkout",
+              "mobile/work-periods",
+              "mobile/kitchen-display",
               "mobile/offline-mode",
               "mobile/receipt-printing",
               "mobile/barcode-scanning"
@@ -135,5 +138,5 @@
       "youtube": "https://www.youtube.com/@qorelly"
     }
   },
-  "description": "Documentation for Qorelly the business management and POS platform for restaurants, spas, pharmacies, retail stores, fuel stations, and more."
+  "description": "Documentation for Qorelly the business management and POS platform for restaurants, spas, pharmacies, retail, hospitality, rentals, and professional services."
 }
