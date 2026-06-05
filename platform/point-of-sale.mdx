@@ -69,6 +69,28 @@ Pending → Preparing → Ready → Completed
 
 ---
 
+## The POS dashboard
+
+When you open the POS, you land on the dashboard — a live view of today's activity and every order currently in motion.
+
+<img
+  src="/images/pos-dashboard.png"
+  alt="POS dashboard with stat cards and order list"
+/>
+
+| Card | What it shows |
+|------|--------------|
+| **Orders Today** | How many orders have been started today |
+| **Revenue Today** | Total ₦ collected today across all payment methods |
+| **Pending** | Orders waiting to be picked up by the kitchen or prep team |
+| **Preparing** | Orders currently being worked on |
+
+Below the cards, every active order appears as a card with the order number, the table or customer, the staff member who took it, how long ago it came in, the first couple of items, and the total. Use the search bar to find a specific order by number or customer, or filter by status using the tabs.
+
+Each card has a quick-action button so your team can move orders forward without opening them — **Start Preparing**, **Mark Ready**, or **Complete Order**, depending on the current status. The more menu (the **···**) holds the rest: **View Details**, other status transitions, and **Cancel Order**.
+
+---
+
 ## Your active orders
 
 Tap **Orders** in the bottom bar to see everything currently in progress. Filter by status to focus on what needs attention:
@@ -99,6 +121,36 @@ You can filter by:
 Each row shows the order ID, date and time, order type, customer, total, payment status, and completion status.
 
 Use **Export CSV** (top right) to download your order history as a spreadsheet — useful for accounting or record-keeping.
+
+---
+
+## POS items
+
+Tap **Items** in the bottom bar to manage everything you sell from the POS in one screen — useful when you need to update prices, fix a barcode, or check stock without leaving the till.
+
+<img
+  src="/images/pos-items.png"
+  alt="POS items list with SKU, barcode, and stock columns"
+/>
+
+The top of the page shows quick counts to help you keep things tidy:
+
+| Card | What it shows |
+|------|--------------|
+| **Total Items** | Every item currently sold in your POS |
+| **Low Stock Items** | Items at or below their reorder point |
+| **Items without SKU** | Items missing a stock keeping unit |
+| **Items without Barcode** | Items missing a barcode |
+
+Each row shows the item, its category, price, current stock, SKU, barcode, and active/inactive status. Filter by category, search by name, SKU, or barcode, and tap an item to edit it.
+
+### Bulk SKU and barcode generation
+
+Need to add SKUs or barcodes to a batch of items at once? Select multiple items using the checkboxes and use **Generate SKU** or **Generate Barcode** at the top. Qorelly creates unique values for every selected item — much faster than typing them in one by one.
+
+<Tip>
+  POS items share the same database as your menu items. Anything you change here (description, price, image) updates the menu too — and vice versa.
+</Tip>
 
 ---
 
