@@ -1,0 +1,135 @@
+---
+title: "Subscriptions"
+description: "Charge customers on a recurring schedule — memberships, monthly orders, long-stay bookings, and more."
+---
+
+Subscriptions handle anything that bills the same customer over and over: a gym membership, a monthly pharmacy refill, a weekly meal plan, or a long-stay hotel reservation. You define what you offer, enrol the customer, and Qorelly tracks every billing cycle and payment from there.
+
+<Info>
+  Subscriptions are named to match your business. Spas see **Memberships**, pharmacies see **Recurring Orders**, hospitality businesses see **Long Stays**, and rental businesses see **Recurring Rentals**. The flow is the same in all of them — only the label changes.
+</Info>
+
+<img
+  src="/images/subscriptions-list.png"
+  alt="Subscriptions list with stat cards and customer rows"
+/>
+
+## Your recurring revenue at a glance
+
+Go to **Subscriptions** to see the state of all your recurring customers.
+
+| Card | What it shows |
+|------|--------------|
+| **Active** | How many customers are currently subscribed |
+| **Estimated MRR** | Monthly recurring revenue across all active subscriptions |
+| **Trialing** | Customers in a free trial period |
+| **Overdue Cycles** | Billing cycles past their due date without payment |
+
+Use the status tabs to filter the list: **All**, **Active**, **Trialing**, **Past Due**, or **Cancelled**.
+
+Each row shows the customer, the plan they're on, when they're next due to be billed, and the ₦ amount.
+
+---
+
+## Subscription plans
+
+Before you can enrol anyone, you need at least one plan. Click **Manage Plans** (top right of the subscriptions list), then **New Plan**.
+
+<img
+  src="/images/subscriptions-plans.png"
+  alt="Subscription plans list with price, interval, and subscriber count"
+/>
+
+A plan defines what's being sold and how often it's billed:
+
+| Field | What to enter |
+|-------|--------------|
+| **Name** | What customers see — e.g. "Monthly Massage", "Weekly Vitamins" |
+| **Description** | Optional detail about what's included |
+| **Price** | What you charge each billing cycle |
+| **Interval** | How often the plan bills — every week, month, year, or a custom number |
+
+Plans can be **Active** (available to enrol new customers into) or **Archived** (hidden from new sign-ups but existing subscribers continue). The plans page shows how many subscribers each plan has so you know what's pulling its weight.
+
+---
+
+## Enrolling a customer
+
+Open a customer from **Customers**, then start a subscription from their profile. Pick the plan, set the start date, and Qorelly creates the subscription and the first billing cycle automatically.
+
+The new subscription appears on the main **Subscriptions** list with a **Next Billing** date based on the plan's interval.
+
+---
+
+## How a subscription progresses
+
+Every subscription moves through a clear life cycle.
+
+| Status | What it means |
+|--------|--------------|
+| **Trialing** | The customer is in a free trial — no money is due yet |
+| **Active** | Billing is happening on schedule |
+| **Past Due** | A cycle is unpaid past its due date |
+| **Paused** | Billing is temporarily halted but the subscription is still in place |
+| **Cancelled** | Ended — no more cycles will be generated |
+| **Expired** | Reached the end of its term and stopped on its own |
+
+Open any subscription to see the full picture: when it started, when the next bill is due, why it was cancelled (if applicable), and any notes.
+
+---
+
+## Billing cycles
+
+Each subscription generates a billing cycle on its interval — a single ₦ amount due for a specific date range. Cycles appear on the subscription detail page, oldest first.
+
+<img
+  src="/images/subscriptions-cycles.png"
+  alt="Billing cycles list on a subscription detail page"
+/>
+
+Each cycle shows:
+
+| Column | What it shows |
+|--------|--------------|
+| **Period** | The start and end dates this cycle covers |
+| **Due** | The ₦ owed for this cycle |
+| **Paid** | How much has been collected against this cycle |
+| **Paid date** | When the cycle was fully paid (if applicable) |
+| **Status** | Pending, Partial, Overdue, or Paid |
+
+### Generating the next cycle
+
+When a cycle is fully paid and the subscription is still active, click **Generate next cycle** to create the next one. The next billing date updates accordingly.
+
+### Recording payments
+
+For any outstanding cycle, click **Record payment** and enter the amount received. Partial payments are supported — the cycle stays open as **Partial** until the rest comes in.
+
+<Tip>
+  Need to charge for the current cycle in full, fast? **Mark current cycle as paid** is a one-click shortcut on the subscription detail page for when you've already collected the money outside Qorelly.
+</Tip>
+
+---
+
+## Pausing, resuming, and cancelling
+
+From the subscription detail page you can:
+
+- **Pause** — stop generating new cycles temporarily (existing unpaid cycles still need to be settled)
+- **Resume** — pick billing back up from where it left off
+- **Cancel** — end the subscription entirely. You're asked for a reason, which appears on the subscription detail page so you remember why later.
+
+A cancelled subscription stops generating cycles but keeps its full history for your records.
+
+---
+
+## Troubleshooting
+
+**I can't find Subscriptions in the menu**
+Make sure the feature is enabled for your business. Go to **Settings > Apps** and check that Subscriptions (or Memberships, Recurring Orders, etc.) is turned on.
+
+**No customers are showing up even though I have active subscribers**
+Check the status tab — you may have **Cancelled** or **Past Due** selected. Switch to **All** to see everyone.
+
+**A cycle didn't generate automatically**
+Cycles are generated when you click **Generate next cycle** on the subscription detail page. Open the subscription and click it to create the next period.

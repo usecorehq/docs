@@ -28,6 +28,8 @@
               "platform/menu-management",
               "platform/point-of-sale",
               "platform/inventory",
+              "platform/invoices",
+              "platform/subscriptions",
               "platform/bookings",
               "platform/banking",
               "platform/customers",

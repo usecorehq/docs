@@ -1,0 +1,153 @@
+---
+title: "Invoices"
+description: "Bill customers, track what's owed, and record payments as they come in."
+---
+
+Invoices let you bill customers for products and services outside the day-to-day POS flow — useful for wholesale orders, corporate clients, event catering, B2B deliveries, or anything you wouldn't ring through the till. Every invoice has a clear status, a due date, and a payment history, so you always know who owes what.
+
+<img
+  src="/images/invoices-list.png"
+  alt="Invoices list with stat cards, status tabs, and invoice rows"
+/>
+
+## Your invoices at a glance
+
+Go to **Invoices** to see everything you've billed. The stats at the top tell you the financial health of your invoicing in seconds:
+
+| Card | What it shows |
+|------|--------------|
+| **Overdue** | Total ₦ on invoices past their due date |
+| **Due in 30 days** | Total ₦ expected in the next 30 days |
+| **Outstanding** | Everything not yet paid in full |
+| **Avg. days to pay** | How quickly your customers usually settle up |
+
+Use the status tabs to focus on what matters now — **Draft**, **Sent**, **Partial**, **Paid**, or **Overdue** — or stick with **All** to see the full list.
+
+---
+
+## Creating an invoice
+
+Click **New Invoice** (top right). The editor walks you through everything in one screen.
+
+<img
+  src="/images/invoices-editor.png"
+  alt="Invoice editor with bill-to, line items, totals, and payment instructions"
+/>
+
+<Steps>
+  <Step title="Pick the customer">
+    Search by name to pull up an existing customer — their email, phone, and billing address fill in automatically. New customer? Type the details directly into the **Bill To** fields and they'll be saved for next time.
+  </Step>
+  <Step title="Set the dates">
+    The **Issue Date** is today by default. Pick **Payment Terms** (Due on receipt, Net 7, Net 14, Net 30, or a custom date) and the due date adjusts itself. The invoice number is generated automatically — you can override it if you have your own numbering scheme.
+  </Step>
+  <Step title="Add line items">
+    For each line, enter a **Description**, **Quantity**, and **Unit Price**. The amount calculates as you type. Use **Add line item** to keep adding rows. If you've saved a product in **Products & Services**, it suggests itself as you start typing.
+  </Step>
+  <Step title="Apply discount and tax">
+    Set a discount as a ₦ amount or %. VAT applies on top. The **Total** at the bottom of the totals panel updates instantly.
+  </Step>
+  <Step title="Choose how you'll get paid">
+    On the right, pick which **Bank Account** the customer should pay into. The account name and number print directly on the invoice so the customer knows where to send money. Add any extra payment instructions in the box below.
+  </Step>
+  <Step title="Add notes and terms">
+    **Notes** are a short message to the customer (e.g. "Thanks for your business"). **Terms & Conditions** carry your standard fine print — late fees, refund policy, anything that should be on every invoice.
+  </Step>
+  <Step title="Preview, save, or send">
+    - **Preview** — see exactly what the customer will see before sending
+    - **Save draft** — keep working on it later
+    - **Save & send** — send the invoice to the customer's email and mark it as Sent
+  </Step>
+</Steps>
+
+---
+
+## Invoice statuses
+
+Every invoice has a status that moves on its own as you act on it.
+
+| Status | What it means |
+|--------|--------------|
+| **Draft** | Started but not sent yet — only you can see it |
+| **Sent** | Delivered to the customer's email, awaiting payment |
+| **Viewed** | The customer has opened the invoice |
+| **Partial** | A payment was recorded, but not the full amount |
+| **Paid** | Settled in full |
+| **Overdue** | Past the due date with money still outstanding |
+| **Cancelled** | Voided — no longer owed |
+
+<Tip>
+  Statuses update automatically based on payments and due dates. You don't need to manage them manually.
+</Tip>
+
+---
+
+## Recording a payment
+
+Open any unpaid invoice and click **Record Payment**.
+
+<img
+  src="/images/invoices-record-payment.png"
+  alt="Record payment modal with amount, method, and reference fields"
+/>
+
+| Field | What to enter |
+|-------|--------------|
+| **Amount** | How much was received. Doesn't have to be the full invoice — partial payments are supported. |
+| **Payment Method** | Bank Transfer, Cash, Card, or Other |
+| **Bank Account / Cash Register** | Where the money landed — picks from your banking setup |
+| **Payment Date** | When the payment was actually received |
+| **Reference** | Optional — e.g. a transfer reference or cheque number |
+
+Once recorded, the payment appears in the **Payments Received** section of the invoice and the **Amount Due** at the top drops by what you collected. When the balance hits zero, the invoice flips to **Paid** automatically.
+
+---
+
+## Sending and downloading
+
+From an open invoice you can:
+
+- **Send Invoice** — emails a copy to the customer
+- **Download PDF** — get a print-ready copy for your records or a customer who prefers a hard copy
+- **Edit Invoice** — change details before it's been paid
+- **Cancel Invoice** — void it; the status changes to Cancelled and it stops counting toward your outstanding total
+
+---
+
+## Customers
+
+Go to **Invoices > Customers** to manage the people and companies you bill regularly.
+
+<Info>
+  This list shares one database with your POS and bookings customers — anyone you've added anywhere shows up here, along with their outstanding ₦ across all invoices.
+</Info>
+
+Click **Add Customer** to save a new billing contact with name, email, phone, address, and any notes you want to remember about them.
+
+---
+
+## Products & Services
+
+Go to **Invoices > Products** to save the line items you bill for over and over — so you don't type them out every time.
+
+| Field | What to enter |
+|-------|--------------|
+| **Name** | What you're selling — e.g. "Monthly catering package" |
+| **Description** | Optional detail that prints on the invoice |
+| **Unit Price** | Default ₦ amount — you can still override per invoice |
+| **Active** | Keep this on to make the item suggest itself in the editor |
+
+When you start typing a line item description in the invoice editor, matching products appear as suggestions. Pick one and the description and price fill in automatically.
+
+---
+
+## Troubleshooting
+
+**The customer says they never got the invoice**
+Make sure their email is correct on the customer record, then open the invoice and click **Send Invoice** again. The status will stay at Sent — sending more than once doesn't change anything else.
+
+**I recorded a payment but the invoice still says Sent**
+Check whether the payment amount equals the full invoice total. If it's less, the status will be **Partial** until the rest is collected.
+
+**An invoice shows as Overdue but the customer already paid**
+The payment may not have been recorded in Qorelly. Open the invoice and click **Record Payment** to log it — the status will switch to Paid as soon as the balance reaches zero.

@@ -1,9 +1,9 @@
 ---
 title: "Banking"
-description: "Track how money moves through your business — bank accounts for transfers and cash registers for physical tills."
+description: "Track how money moves through your business — bank accounts, cash registers, card terminals, and a running wallet of every payment."
 ---
 
-Banking gives you two ways to track money in Qorelly: **bank accounts** for transfer payments, and **cash registers** for physical till locations. Together they give you a clear picture of how revenue is coming in across your business.
+Banking is where every form of money you accept lives in one place: **bank accounts** for transfers, **cash registers** for physical tills, **card terminals** for swipes and taps, and your **wallet** — a running view of every payment that's come in across the lot. Together they give you a clear picture of how revenue is moving through your business.
 
 <img
   src="/images/banking-overview.png"
@@ -79,6 +79,63 @@ The difference between these two is your cash takings for the period.
 
 ---
 
+## Card terminals
+
+Card terminals are the physical card readers your team uses to take card payments. Tracking each terminal separately gives you a clean way to attribute card revenue to a specific till, location, or provider.
+
+<img
+  src="/images/banking-card-terminals.png"
+  alt="Card terminals list with provider and settles-to columns"
+/>
+
+Go to **Banking > Card Terminals** and click **Add Terminal**.
+
+| Field | What to enter |
+|-------|--------------|
+| **Label** | A nickname — e.g. "Front Counter Reader" |
+| **Terminal ID** | The ID printed on the device or in your provider's portal |
+| **Provider** | Your payment provider — e.g. Squad, Paystack, Moniepoint |
+| **Location** | Which physical location this terminal lives at |
+| **Settles to** | The bank account this terminal pays out into |
+
+Check **Set as default** if this is the primary card terminal at its location. The default terminal is auto-selected for card payments in the POS.
+
+Use the **Location** dropdown at the top of the list to filter by location if you have more than one.
+
+<Tip>
+  Setting "Settles to" on each terminal makes it obvious where card money lands. When you reconcile against a bank statement, you can match each terminal's takings to the right account in seconds.
+</Tip>
+
+---
+
+## Wallets
+
+Go to **Banking > Wallets** for a single running view of every payment that's come into your business — POS sales and paid invoices combined.
+
+<img
+  src="/images/banking-wallets.png"
+  alt="Wallets page with total generated stat and transaction list"
+/>
+
+At the top, **Total Generated** shows your all-time revenue from completed orders and paid invoices. Below it, every transaction is listed with:
+
+| Column | What it shows |
+|--------|--------------|
+| **Type** | Whether the money came from an Order or an invoice Payment |
+| **Reference** | The order or invoice number it relates to |
+| **Date** | When the payment landed |
+| **Payment Method** | Bank Transfer, Cash, Card, or however the customer paid |
+| **Destination** | Which bank account, cash register, or card terminal received it |
+| **Amount** | What you collected |
+
+The wallet is read-only — it reflects payments recorded elsewhere in Qorelly. Think of it as the answer to "how much have we taken, by what method, and where did it land?"
+
+<Info>
+  A more advanced wallet — with payouts, transfers between accounts, and reconciliation tools — is in development. For now, the wallet is the cleanest way to see all incoming money in one feed.
+</Info>
+
+---
+
 ## Banking settings
 
 Go to **Banking > Settings** to control which banking features appear in your sidebar.
@@ -92,6 +149,7 @@ Go to **Banking > Settings** to control which banking features appear in your si
 |--------|-----------------|
 | **Bank Accounts** | Shows or hides the bank accounts section in your sidebar |
 | **Cash Registers** | Shows or hides cash registers in your sidebar |
+| **Card Terminals** | Shows or hides card terminals in your sidebar |
 
 <Info>
   Wallets and Settings always appear in the Banking menu and cannot be hidden.
@@ -107,9 +165,10 @@ When a customer pays at checkout, your staff choose a payment method. Qorelly us
 
 - **Bank transfer** — shows your default bank account number automatically
 - **Cash** — assigns the payment to your default cash register automatically
+- **Card** — recorded against your default card terminal for that location
 
-Both can be overridden per transaction if needed.
+Any of these can be overridden per transaction if needed.
 
 <Tip>
-  Set up your bank account and at least one cash register before you start taking orders. Without them, your staff will have to enter payment details manually at checkout.
+  Set up at least one bank account, cash register, and card terminal before you start taking orders. Without them, your staff will have to enter payment details manually at checkout.
 </Tip>
