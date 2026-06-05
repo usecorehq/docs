@@ -1,0 +1,98 @@
+---
+title: "Sale & Checkout"
+description: "Take an order on a phone or tablet — add items, link a customer, take payment, and finish."
+---
+
+The mobile sale flow is built for one thing: getting from "the customer wants this" to "paid and done" as fast as possible. It works the same on phone, tablet, iPad, and desktop — the layout just stretches to fit the screen.
+
+<img
+  src="/images/mobile-sale-screen.png"
+  alt="Mobile sale screen with menu grid and floating cart pill"
+/>
+
+## Building an order
+
+Open the **Sale** tab. You'll see your menu as a grid of cards, with category pills along the top.
+
+| Action | How |
+|--------|-----|
+| **Filter by category** | Tap a category pill at the top |
+| **Search** | Tap the search bar — it works across names, SKUs, and barcodes |
+| **Add an item** | Tap the item card. A green border appears with quantity controls |
+| **Change quantity** | Use the **+** and **−** buttons on the selected item |
+
+On a phone, a **View Cart** pill appears at the bottom as soon as you add the first item. Tap it to open the full cart. On a tablet, the cart lives in a side panel on the right and is always visible.
+
+### Working offline
+
+If you lose your internet connection, an orange banner appears: *"You're offline — orders will sync when connection returns."* Keep taking orders as normal. Everything saves on the device and uploads automatically the moment you're back online.
+
+## The cart
+
+Tapping **View Cart** opens the full checkout screen.
+
+<img
+  src="/images/mobile-cart.png"
+  alt="Cart screen with items, order type, customer, payment, and summary"
+/>
+
+<Steps>
+  <Step title="Review the items">
+    Each line shows the quantity, name, modifiers, and any note. Tap a row to change the quantity in a popup. Tap the bin icon to remove the line.
+  </Step>
+  <Step title="Choose the order type">
+    Pick **Dine-in**, **Takeaway**, or **Delivery**. For dine-in, a **Table** picker appears below — tap to pick from your floor plan.
+  </Step>
+  <Step title="Link a customer (optional)">
+    Search for an existing customer, or type their details to create one on the spot. Leave blank for a walk-in.
+  </Step>
+  <Step title="Choose payment">
+    Pick **Cash**, **Card (POS)**, or **Bank Transfer**. For cash, an **Amount tendered** field appears with a live change calculator — it shows ₦ change due or warns "Insufficient amount" in red.
+  </Step>
+  <Step title="Apply a discount">
+    Enter a discount in the summary section. Subtotal, VAT, and total update instantly.
+  </Step>
+  <Step title="Finish the order">
+    Tap the big button at the bottom — labelled with the total (e.g. **"Create Order · ₦5,200"**). Or use **Save draft** to hold the order, or **Pay later** to send it through without collecting yet.
+  </Step>
+</Steps>
+
+When the order is placed, you'll see a green tick, the order number, and quick buttons to **View Order**, **Print receipt** (if a printer is connected), and start a **New Order**.
+
+## Scan-to-checkout
+
+Customers browsing your digital menu can build their own cart, then show their phone at the till for a fast ring-up. Tap the **QR** button on the Sale screen and scan the customer's cart code.
+
+A confirmation sheet shows their order:
+
+- **Yellow warning chips** if anything's changed — *"X items no longer available"* or *"X items with updated prices"*
+- **Updated price notes** under any item whose price has changed since they scanned (*"was ₦X when scanned"*)
+- **Skipped items** at the bottom if anything in their cart is no longer available
+
+Tap **Add to order** to drop the verified items into your cart, then continue checkout as normal. Tap **Cancel** to back out.
+
+<Tip>
+  Scan-to-checkout is the fastest way to ring up a customer who already knows what they want. It also cuts down on misheard orders — what's on their phone is what goes in the cart.
+</Tip>
+
+## Splitting a bill
+
+Tap **Split bill** on any order to divide the total between people. Two modes:
+
+### Equal split
+
+Set how many people are paying (2 to 10). The screen shows the per-person amount in large branded type. For each person, tap **Charge person N** to take their share. As each one pays, a green tick replaces the button.
+
+### By item
+
+Set how many people are paying. Each line item has chips numbered 1, 2, 3… — tap a chip to assign that item to a person. Under the items, each person's running total updates as you assign. Tap **Charge person N** when you're ready to take their share.
+
+After tapping a charge button, a **Payment method** sheet appears — pick **Cash**, **Card**, or **Transfer** for that person and confirm.
+
+<Info>
+  Split bill works alongside the rest of the checkout — the order is still one order in your reports, just paid by multiple people.
+</Info>
+
+## Adding items to an existing order
+
+Need to bring something extra to a table that's already ordered? Open the order, tap **Add items**, and you're back in the menu grid. Tap items to add them, then tap **Confirm · ₦[subtotal]** to merge them into the original order. The kitchen sees the new items and the bill updates.
